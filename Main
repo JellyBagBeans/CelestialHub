@@ -95,32 +95,6 @@ local woof = Instance.new("ScreenGui")
 woof.Name = "woof"
 woof.Parent = game.CoreGui
 
-function Mainholder:Window(hubname, gamename, discordlink, halflink)
-   local FirstTab = false
-
-   local MainFrame = Instance.new("Frame")
-   local MainCorner = Instance.new("UICorner")
-   local LeftFrame = Instance.new("Frame")
-   local LeftFrameCorner = Instance.new("UICorner")
-   local TabHolder = Instance.new("Frame")
-   local TabHoldLayout = Instance.new("UIListLayout")
-   local DragFrame = Instance.new("Frame")
-   local GameTitle = Instance.new("TextLabel")
-   local MainTitle = Instance.new("TextLabel")
-   local lineY = Instance.new("Frame")
-   local MainFrameholder = Instance.new("Frame")
-   local OpenClose = Instance.new("TextButton")
-   local OpenCloseCorner = Instance.new("UICorner")
-   local Discord = Instance.new("TextButton")
-   local DiscordCorner = Instance.new("UICorner")
-   local Keybind = Instance.new("TextButton")
-   local TextKeybind = Instance.new("TextLabel")
-   local BindText = Instance.new("TextLabel")
-   local Glow = Instance.new("ImageLabel")
-   local ContainerHold = Instance.new("Frame")
-   local TaTitle = Instance.new("TextLabel")
-   local DragFrame2 = Instance.new("Frame")
-   local DragFrame2_2 = Instance.new("Frame")
 
    MainFrame.Name = "MainFrame"
    MainFrame.Parent = woof
