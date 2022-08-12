@@ -461,12 +461,12 @@ function Mainholder:Window(hubname, gamename, discordlink, halflink)
       ):Play()
    end)
 
-   Discord.MouseButton1Click:Connect(function()
-      setclipboard("https://discord.gg/wVjn9m5Ac5")
- 	game:GetService("StarterGui"):SetCore("SendNotification",{
-		Title = "Celestial Hub", -- Required
-		Text = "Discord has been copied to clipboard!", -- Required
-	})
+	Discord.MouseButton1Click:Connect(function()
+		setclipboard("https://discord.gg/wVjn9m5Ac5")
+		game:GetService("StarterGui"):SetCore("SendNotification",{
+			Title = "Celestial Hub", -- Required
+			Text = "Discord has been copied to clipboard!", -- Required
+		})
    end)
    
    DiscordCorner.CornerRadius = UDim.new(0, 6)
