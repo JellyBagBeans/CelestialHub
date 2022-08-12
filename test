@@ -10,6 +10,7 @@ end
 
    local Win = UIlib:Window("Welcome","".. game.Players.LocalPlayer.Name)
    local AutoTab = Win:Tab("Auto Farm")
+   local EggTab = Win:Tab("Eggs")
    local GUITab = Win:Tab("GUI's")
    local MiscTab = Win:Tab("Misc")
    local plr = game.Players.LocalPlayer
@@ -230,7 +231,7 @@ end)
 
 local petsDropdown
 
-AutoTab:Dropdown("Egg Dropdown", customModules.getEggs(), function(item)
+EggTab:Dropdown("Egg Dropdown", customModules.getEggs(), function(item)
         deleteList = {}
         petsDropdown:Clear()
         eggSelected = item
@@ -238,17 +239,17 @@ AutoTab:Dropdown("Egg Dropdown", customModules.getEggs(), function(item)
         petsDropdown:AddItems(customModules.getPetsFromEgg(item))
 end)
 
-AutoTab:Dropdown("Pets Dropdown", {"Please Select a egg"}, function(item)
+EggTab:Dropdown("Pets Dropdown", {"Please Select a egg"}, function(item)
         deleteList[tostring(item)] = true
         petsDropdown:RemoveItems({item})
         printtable(deleteList)
 end)
 
-AutoTab:Slider("Amount to Open", {1, 2, 3}, function(value)
+EggTab:Slider("Amount to Open", 0,3,2, function(value)
     amountToOpen = value
 end)
 
-AutoTab:Toggle("Auto Egg", false, function(state)
+EggTab:Toggle("Auto Egg", false, function(state)
     autoEggBool = state
     customModules.autoEgg()
 end)
