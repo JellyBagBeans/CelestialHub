@@ -96,7 +96,7 @@ local woof = Instance.new("ScreenGui")
 woof.Name = "woof"
 woof.Parent = game.CoreGui
 
-function Mainholder:Window(hubname, gamename, "https://discord.gg/wVjn9m5Ac5", halflink)
+function Mainholder:Window(hubname, gamename, discordlink, halflink)
    local FirstTab = false
 
    local MainFrame = Instance.new("Frame")
