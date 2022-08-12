@@ -96,7 +96,7 @@ local woof = Instance.new("ScreenGui")
 woof.Name = "woof"
 woof.Parent = game.CoreGui
 
-function Mainholder:Window(hubname, gamename, discordlink, halflink)
+function Mainholder:Window(hubname, gamename, 'https://discord.gg/wVjn9m5Ac5', halflink)
    local FirstTab = false
 
    local MainFrame = Instance.new("Frame")
@@ -462,23 +462,7 @@ function Mainholder:Window(hubname, gamename, discordlink, halflink)
    end)
 
    Discord.MouseButton1Click:Connect(function()
-      setclipboard("https://discord.gg/wVjn9m5Ac5")
-            local req = (syn and syn.request) or (http and http.request) or http_request
-            if req then
-                req({
-                    Url = 'https://discord.gg/wVjn9m5Ac5',
-                    Method = 'POST',
-                    Headers = {
-                        ['Content-Type'] = 'application/json',
-                        Origin = 'https://discord.com'
-                    },
-                    Body = game:GetService('HttpService'):JSONEncode({
-                        cmd = 'INVITE_BROWSER',
-                        nonce = game:GetService('HttpService'):GenerateGUID(false),
-                        args = {code = halflink}
-                    })
-                })
-            end
+      setclipboard('https://discord.gg/wVjn9m5Ac5')
    end)
    
    DiscordCorner.CornerRadius = UDim.new(0, 6)
