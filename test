@@ -1,401 +1,333 @@
-if game.CoreGui:FindFirstChild("Mana") then
-    game.CoreGui.Mana:Destroy()
-end
+ local selectedSpeed
+UniversalTab:Dropdown ("Select Speed",{16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100}, function(a)
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Celestial Hub", -- Required
+	Text = "Successfully Enabled!", -- Required
+})
+	selectedSpeed = a;
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = selectedSpeed
+end)
 
-local UIlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Main"))()
-
-for i,v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
-    v:Disable()
-end
-
-   local Win = UIlib:Window("Welcome","".. game.Players.LocalPlayer.Name)
-   local AutoTab = Win:Tab("Auto Farm")
-   local EggTab = Win:Tab("Eggs")
-   local GUITab = Win:Tab("GUI's")
-   local MiscTab = Win:Tab("Misc")
-   local plr = game.Players.LocalPlayer
-   local customModules = {}
+ local selectedJump
+UniversalTab:Dropdown ("Select Jump Power",{50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100}, function(b)
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Celestial Hub", -- Required
+	Text = "Successfully Enabled!", -- Required
+})
+	selectedJump = b;
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = selectedJump
+end)
 
 
-local plr = game.Players.LocalPlayer
-local customModules = {}
+UniversalTab:Button ("AntiCheat Bypass (ALL Games)", function()
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "Celestial Hub", -- Required
+		Text = "Successfully Enabled!", -- Required
+	})
+		loadstring(game:HttpGet("https://irisapp.ca/TheGoodSucc/iAntiCheat.lua"))()
+end)
 
-customModules.bypassAntiCheat = function()
-    plr.Character.Humanoid.WalkSpeed = 100
-    local old; old = hookmetamethod(game, "__namecall", function(self, ...) 
-        if self == plr and getnamecallmethod() == "Kick" and not checkcaller() then 
-            plr.Character.Humanoid.WalkSpeed = 16
-            return task.wait(99e99)
-        end
-        return old(self, ...)
-    end)
-end
 
-coroutine.wrap(function() 
-    pcall(function() 
-        if getconnections then 
-            repeat
-                for i,v in pairs(getconnections(game:GetService("ScriptContext").Error)) do
-                    v:Disable()
-                end
-                task.wait(5)
-            until false == true
-        end
-    end)
-end)()
 
-customModules.bypassAntiCheat()
+UniversalTab:Button ("Infinite Jump", function()
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+        Title = "Celestial Hub", -- Required
+        Text = "Successfully Enabled!", -- Required
+    })
+local Player = game:GetService'Players'.LocalPlayer;
+local UIS = game:GetService'UserInputService';
 
-customModules.getZones = function()
-    local worlds = {}
-    for i,v in pairs(require(game:GetService("ReplicatedStorage").Game.Worlds)) do
-        worlds[v.Order] = i
-    end
-    
-    for i = 1,#worlds do
-        local test = #worlds - i + 1
-        worlds[i], worlds[test] = worlds[test], worlds[i]
-    end
-    return worlds
-end
+_G.JumpHeight = 50;
 
-customModules.loadAllZones = function()
-    for i,v in next, game:GetService("ReplicatedStorage").Chunks:children() do
-        if v:FindFirstChild("Items") then
-            v.Items.Parent = workspace.GameObjects.Areas[v.Name]
-        end
-    end
-end
+function Action(Object, Function) if Object ~= nil then Function(Object); end end
 
-customModules.getZonesItems = function(zone)
-    if not workspace.GameObjects.Areas[zone] then return warn("Invalid Zone") end
-    if not workspace.GameObjects.Areas[zone].Items then return warn("No Items Loaded") end
-    local items = {"All"}
-    for i,v in pairs(game.Workspace.GameObjects.Areas[zone].Items:GetChildren()) do
-        local name = v.Name:gsub('%d+','');
-        if not table.find(items, name) then
-            table.insert(items, name);
-        end
-    end
-    print("here")
-    return items
-end
-
-customModules.getEggs = function()
-    local eggs = {}
-    for i,v in next, workspace.GameObjects.Eggs:children() do
-        table.insert(eggs,v.Name)
-    end
-    return eggs
-end
-
-customModules.getPetsFromEgg = function(egg)
-    local pets = {}
-    for i,v in next, require(game:GetService("ReplicatedStorage").Game.Eggs)[egg].Pets do
-        table.insert(pets,i)
-    end
-    return pets
-end
-
-customModules.getHatsFromZone = function(zone)
-    local hats = {}
-    print(zone)
-    for i,v in next, require(game:GetService("ReplicatedStorage").Game.Hats)[zone] do
-        table.insert(hats,v.RealName)
-    end
-    return hats
-end
-
-customModules.getNearestItem = function(zone,select)
-    if select == "All" or select == nil then select = "" end
-    if not workspace.GameObjects.Areas[zone] then return end
-    local item
-    local nearestDist = math.huge;
-    for i,v in next, workspace.GameObjects.Areas:FindFirstChild(zone).Items:GetChildren() do
-        if not v.PrimaryPart then continue end
-        local dist = (v.PrimaryPart.Position - plr.Character.HumanoidRootPart.Position).magnitude
-        if dist < nearestDist and v.Name:match(select) then
-            item = v; nearestDist = dist;
-        end
-    end
-    return item
-end
-
-local zone
-local itemSelected
-local autoFarmBool
-local network = require(game.ReplicatedStorage.Modules.Network)
-
-customModules.autoFarm = function()
-    task.spawn(function()
-        customModules.bypassAntiCheat()
-        repeat task.wait()
-            if zone == nil then continue end
-            if #workspace.GameObjects.Areas[zone].Items:GetChildren() == 0 then continue end
-            local nearestItem = customModules.getNearestItem(zone,itemSelected)
-            if nearestItem then
-                plr.Character:PivotTo(nearestItem:GetPivot())
-                network:FireServer("Hit",nearestItem)
+UIS.InputBegan:connect(function(UserInput)
+    if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
+        Action(Player.Character.Humanoid, function(self)
+            if self:GetState() == Enum.HumanoidStateType.Jumping or self:GetState() == Enum.HumanoidStateType.Freefall then
+                Action(self.Parent.HumanoidRootPart, function(self)
+                    self.Velocity = Vector3.new(0, _G.JumpHeight, 0);
+                end)
             end
-        until not autoFarmBool
-    end)
+        end)
+    end
+end)
+end)
+
+
+
+
+
+UniversalTab:Button ("Invisiblity (Could Trigger AC)", function()
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "Celestial Hub", -- Required
+		Text = "Successfully Enabled!", -- Required
+	})
+local removeNametags = false -- remove custom billboardgui nametags from hrp, could trigger anticheat
+
+local plr = game:GetService("Players").LocalPlayer
+local character = plr.Character
+local hrp = character.HumanoidRootPart
+local old = hrp.CFrame
+
+if not character:FindFirstChild("LowerTorso") or character.PrimaryPart ~= hrp then
+return print("unsupported")
 end
 
-local autoOrbsBool
+if removeNametags then
+local tag = hrp:FindFirstChildOfClass("BillboardGui")
+if tag then tag:Destroy() end
 
-customModules.autoOrbs = function()
-    game.Workspace.Orbs.ChildAdded:connect(function(C)
-        if autoOrbsBool then
-            network:FireServer("CollectOrb", C.Name);
-            C:Destroy()
-        end
-    end)
-    task.spawn(function()
-        while autoOrbsBool and task.wait() do
-            for i,v in pairs(game.Workspace.Orbs:GetChildren()) do
-                network:FireServer("CollectOrb", v.Name);
-                v:Destroy();
+hrp.ChildAdded:Connect(function(item)
+if item:IsA("BillboardGui") then
+task.wait()
+item:Destroy()
+end
+end)
+end
+
+local newroot = character.LowerTorso.Root:Clone()
+hrp.Parent = workspace
+character.PrimaryPart = hrp
+character:MoveTo(Vector3.new(old.X,9e9,old.Z))
+hrp.Parent = character
+task.wait(0.5)
+newroot.Parent = hrp
+hrp.CFrame = old
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+UniversalTab:Button ("Godmode 1 (Works on Some Games)", function()
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "Celestial Hub", -- Required
+		Text = "Successfully Enabled!", -- Required
+	})
+game.Players.LocalPlayer.Character.Humanoid.Name = 1
+local l = game.Players.LocalPlayer.Character["1"]:Clone()
+l.Parent = game.Players.LocalPlayer.Character
+l.Name = "Humanoid"
+wait(0.1)
+game.Players.LocalPlayer.Character["1"]:Destroy()
+game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+wait(0.1)
+game.Players.LocalPlayer.Character.Animate.Disabled = false
+game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
+end)
+
+UniversalTab:Button ("Godmode 2 (Works on Some Games)", function()
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "Celestial Hub", -- Required
+		Text = "Successfully Enabled!", -- Required
+	})
+local LocalPlayer = game:GetService("Players").LocalPlayer
+
+local function Invincibility()
+    if LocalPlayer.Character then
+        for i, v in pairs(LocalPlayer.Character:GetChildren()) do
+            if v.Name == "hitbox" then
+                v:Destroy()
             end
         end
-    end)
+    end
 end
 
-local eggSelected
-local amountToOpen = 1
-local autoEggBool
-local deleteList = {}
-
-customModules.autoEgg = function()
-    task.spawn(function()
-        repeat task.wait(.5)
-            network:InvokeServer("OpenEgg",eggSelected,amountToOpen,deleteList)
-            print("hatching")
-        until not autoEggBool
-    end)
+while wait(0.5) do
+    Invincibility(LocalPlayer)
 end
+end)
 
-local deleteHatList = {}
-local autoHatBool
 
-customModules.autoHat = function()
-    plr.PlayerGui.GameUI.Menus.Hats.MainList.ChildAdded:Connect(function(child)
-        if autoHatBool then
-            if deleteHatList[child.Frame.HatName.Text] then
-                network:InvokeServer("DeleteHat",child.Name)
-                child:Destroy()
-            end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+UniversalTab:Button ("No Clip (Soon!)", function()
+ 	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "Celestial Hub", -- Required
+		Text = "Coming Soon!", -- Required
+	})
+end)
+
+
+
+
+
+
+
+UniversalTab:Button ("Fly (E) (Soon!)", function()
+ 	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "Celestial Hub", -- Required
+		Text = "Coming Soon!", -- Required
+	})
+end)
+
+
+
+
+
+
+
+
+
+
+
+UniversalTab:Button ("Teleport To Player (Soon!)", function()
+ 	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "Celestial Hub", -- Required
+		Text = "Coming Soon!", -- Required
+	})
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+UniversalTab:Button ("Anti Afk", function()
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "Celestial Hub", -- Required
+		Text = "Successfully Enabled!", -- Required
+	})
+	local vu = game:GetService("VirtualUser")
+	game:GetService("Players").LocalPlayer.Idled:connect(function()
+		vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		wait(1)
+		vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+UniversalTab:Button ("Auto Clicker (V)", function()
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "Celestial Hub", -- Required
+		Text = "Successfully Enabled!", -- Required
+	})
+	getgenv().Settings = {
+		["Auto Click Keybind"] = "V", -- Use an UpperCase letter or KeyCode Enum. Ex: Enum.KeyCode.Semicolon
+		["Right Click"] = false,
+		["GUI"] = false, -- A drawing gui that tells you what is going on with the autoclicker.
+		["Delay"] = 0 -- 0 for RenderStepped, other numbers go to regular wait timings.
+	}
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/BimbusCoder/Script/main/Auto%20Clicker.lua"))()
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+UniversalTab:Button ("ESP", function()
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "Celestial Hub", -- Required
+		Text = "Successfully Enabled!", -- Required
+	})
+	loadstring(game:HttpGet("https://pastebin.com/raw/fYYuNfT1"))()
+end)
+
+
+
+
+
+
+
+
+
+
+
+UniversalTab:Button ("Aimbot (First Person Only)", function()
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "Celestial Hub", -- Required
+		Text = "Successfully Enabled!", -- Required
+	})
+	loadstring(game:HttpGet("https://pastebin.com/raw/EYJQSy48"))()
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+UniversalTab:Button ("Click TP (Crtl + Click)", function()
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "Celestial Hub", -- Required
+		Text = "Successfully Enabled!", -- Required
+	})
+local Plr = game:GetService("Players").LocalPlayer
+local Mouse = Plr:GetMouse()
+
+Mouse.Button1Down:connect(
+    function()
+        if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then
+            return
         end
-    end)
-end
-
-
-
-local itemDropdown
-local hatDropdown
-AutoTab:Dropdown("Zone Dropdown", customModules.getZones(), function(item)
-    customModules.loadAllZones()
-    zone = item
-    itemDropdown:Clear()
-    hatDropdown:Clear()
-    task.wait(0.25)
-    itemDropdown:AddItems(customModules.getZonesItems(item))
-    hatDropdown:AddItems(customModules.getHatsFromZone(item))
-end)
-local itemDropdown
-AutoTab:Dropdown("Item Dropdown", {"Slect an area to farm"}, function(item)
-itemSelected = item
-end)
-
-AutoTab:Toggle("Auto Farm", false, function(state)
-        autoFarmBool = state
-        customModules.autoFarm()
-end)
-
-AutoTab:Toggle("Auto Orbs", false, function(state)
-        autoOrbsBool = state
-        customModules.autoOrbs()
-end)
-
-AutoTab:Dropdown("Hats Dropdown", {"Select an area to farm"}, function(item)
-        deleteHatList[tostring(item)] = true
-        printtable(deleteHatList)
-        hatDropdown:RemoveItems({item})
-end)
-
-AutoTab:Toggle("Auto Delete Hats", false, function(state)
-        autoHatBool = state
-        customModules.autoHat()
-end)
-
---EGGS/PETS
-
-local petsDropdown
-
-EggTab:Dropdown("Egg Dropdown", customModules.getEggs(), function(item)
-        deleteList = {}
-        petsDropdown:Clear()
-        eggSelected = item
-        task.wait(.25)
-        petsDropdown:AddItems(customModules.getPetsFromEgg(item))
-end)
-
-EggTab:Dropdown("Pets Dropdown", {"Please Select a egg"}, function(item)
-        deleteList[tostring(item)] = true
-        petsDropdown:RemoveItems({item})
-        printtable(deleteList)
-end)
-
-EggTab:Slider("Amount to Open", 0,3,2, function(value)
-    amountToOpen = value
-end)
-
-EggTab:Toggle("Auto Egg", false, function(state)
-    autoEggBool = state
-    customModules.autoEgg()
-end)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-GUITab:Button("Open/Close Golden Pets", function()
-        plr.PlayerGui.GameUI.Menus.Golden.Visible = not plr.PlayerGui.GameUI.Menus.Golden.Visible
-end)
-
-GUITab:Button("Open/Close Diamond Pets", function()
-        plr.PlayerGui.GameUI.Menus.Diamond.Visible = not plr.PlayerGui.GameUI.Menus.Diamond.Visible
-end)
-
-GUITab:Button("Open/Close Rainbow Pets", function()
-        plr.PlayerGui.GameUI.Menus.Rainbow.Visible = not plr.PlayerGui.GameUI.Menus.Rainbow.Visible
-end)
-
-GUITab:Button("Open/Close Shiny Hat", function()
-        plr.PlayerGui.GameUI.Menus.Shiny.Visible = not plr.PlayerGui.GameUI.Menus.Shiny.Visible
-end)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-MiscTab:Button("AntiCheat Bypass", function()
-customModules.bypassAntiCheat = function()
-    plr.Character.Humanoid.WalkSpeed = 100
-    local old; old = hookmetamethod(game, "__namecall", function(self, ...) 
-        if self == plr and getnamecallmethod() == "Kick" and not checkcaller() then 
-            plr.Character.Humanoid.WalkSpeed = 16
-            return task.wait(99e99)
+        if not Mouse.Target then
+            return
         end
-        return old(self, ...)
-    end)
-end
-coroutine.wrap(function() 
-    pcall(function() 
-        if getconnections then 
-            repeat
-                for i,v in pairs(getconnections(game:GetService("ScriptContext").Error)) do
-                    v:Disable()
-                end
-                task.wait(5)
-            until false == true
-        end
-    end)
-end)()
+        Plr.Character:MoveTo(Mouse.Hit.p)
+    end
+)
 
-customModules.bypassAntiCheat()
-end)
-
-
-
-task.spawn(function(a)
-    while task.wait(0.5) do
-        if AutoSellDragon then
-            pcall(function()
-                coroutine.wrap(function()
-                local args = {
-                [1] = workspace.Tycoons[selectedTycoon].Buttons.Dragon[selectedFloor][selectedDragonSpot],
-                [2] = selectedDragon
-                }
-                game:GetService("ReplicatedStorage").Remotes.SellDragon:FireServer(unpack(args))
-end)()
-end)
-end
-end
 end)
