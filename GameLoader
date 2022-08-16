@@ -13,6 +13,8 @@ elseif game.PlaceId == 7606302010 then -- Yo-Yo Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/YoYoSimulator"))()
 elseif game.PlaceId == 8818978508 then -- Space Simulator Reborn
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SpaceReborn"))()
+elseif game.PlaceId == 8962384769 then -- Firework Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/FireworkSimulator"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
