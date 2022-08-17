@@ -15,6 +15,8 @@ elseif game.PlaceId == 8818978508 then -- Space Simulator Reborn
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SpaceReborn"))()
 elseif game.PlaceId == 8962384769 then -- Firework Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/FireworkSimulator"))()
+elseif game.PlaceId == 8894888083 then -- Pinata Legends
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PinataLegends"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
