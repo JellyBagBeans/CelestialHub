@@ -1,6 +1,4 @@
-if game.Players.LocalPlayer.UserId == 1237414156 then
-game.Players.LocalPlayer:Kick("You have been Banned: Reason Exploiting")
-end
+
 
 
 --Boronide™ Premium Obfuscation, v0.6.1
