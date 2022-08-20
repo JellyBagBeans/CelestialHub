@@ -1,4 +1,6 @@
-
+if game.Players.LocalPlayer.UserId == 3501269708 then
+game.Players.LocalPlayer:Kick("Access Denied")
+end
 if game.PlaceId == 8884334497 then -- Mining Clicker Simulator (Group: Spyder Crew)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MiningClickerSim"))()
 elseif game.PlaceId == 7969108904 then -- Clicking Simulator (Group: Big Chefs) 
