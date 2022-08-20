@@ -19,6 +19,8 @@ elseif game.PlaceId == 8894888083 then -- Pinata Legends
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PinataLegends"))()
 elseif game.PlaceId == 10157366004 then -- Pet Tapping Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetTappingSimulator"))()
+elseif game.PlaceId == 10351639671 then -- Anime Legends Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AnimeLegendsSimulator"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
