@@ -27,6 +27,8 @@ elseif game.PlaceId == 5293755937 then -- Speed Run Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SpeedRunSim"))()
 elseif game.PlaceId == 9157870347 then -- Swarm Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SwarmSimulator"))()
+elseif game.PlaceId == 8571633166 then -- Pet Gods Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetGodsSim"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
