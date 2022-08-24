@@ -29,6 +29,8 @@ elseif game.PlaceId == 8571633166 then -- Pet Gods Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetGodsSim"))()
 elseif game.PlaceId == 8612195438 then -- Clicker Party Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ClickerPartySim"))()
+elseif game.PlaceId == 10108131074 then -- Mow The Lawn
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MowTheLawn"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
