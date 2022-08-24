@@ -1,4 +1,3 @@
-
 if game.PlaceId == 8884334497 then -- Mining Clicker Simulator (Group: Spyder Crew)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MiningClickerSim"))()
 elseif game.PlaceId == 7969108904 then -- Clicking Simulator (Group: Big Chefs) 
@@ -32,7 +31,7 @@ elseif game.PlaceId == 8612195438 then -- Clicker Party Simulator
 elseif game.PlaceId == 10108131074 then -- Mow The Lawn
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MowTheLawn"))()
 elseif game.PlaceId == 9336544530 then -- Dice Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/DiceSimulator))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/DiceSimulator"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
