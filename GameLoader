@@ -36,6 +36,8 @@ elseif game.PlaceId == 10106105124 then -- Wheat Farming
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/WheatFarmingSimulator"))()
 elseif game.PlaceId == 9285238704 then -- Race Clicker
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RaceClicker"))()
+elseif game.PlaceId == 6875469709 then -- Strongest Punch Sim
+    https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongestPunchSim
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
