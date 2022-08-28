@@ -42,6 +42,8 @@ elseif game.PlaceId == 6284583030 then -- Pet Sim X
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorX"))()
 elseif game.PlaceId == 10321372166 then -- Pet Sim X HC
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorX"))()
+elseif game.PlaceId == 10476933477 then -- Strong Ninja Sim
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongNinjaSim"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
