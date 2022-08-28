@@ -40,6 +40,8 @@ elseif game.PlaceId == 6875469709 then -- Strongest Punch Sim
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongestPunchSim"))()
 elseif game.PlaceId == 6284583030 then -- Pet Sim X
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorX"))()
+elseif game.PlaceId == 10321372166 then -- Pet Sim X HC
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorX"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
