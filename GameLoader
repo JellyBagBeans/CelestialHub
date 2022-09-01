@@ -48,7 +48,8 @@ elseif game.PlaceId == 10184360875 then -- Pets & Fishing Sim
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetsFishingSim"))()
 elseif game.PlaceId == 8539647832 then -- Shovel Legends
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ShovelLegends"))()
-    
+elseif game.PlaceId == 8750997647 then -- Tapping Legends X
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TappingLegendsX"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
