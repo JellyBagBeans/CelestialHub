@@ -56,6 +56,8 @@ elseif game.PlaceId == 10141430483 then -- Slaying Legends
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SlayingLegends"))() 
 elseif game.PlaceId == 8540346411 then -- Rebirth Champions X
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RebirthChampionsX"))() 
+elseif game.PlaceId == 6677573193 then -- Axe Champions
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AxeChampions"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
