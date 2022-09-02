@@ -50,6 +50,8 @@ elseif game.PlaceId == 8539647832 then -- Shovel Legends
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ShovelLegends"))()
 elseif game.PlaceId == 8750997647 then -- Tapping Legends X
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TappingLegendsX"))()
+elseif game.PlaceId == 10204162989 then -- Pickaxe Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PickaxeSimulator"))() 
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
