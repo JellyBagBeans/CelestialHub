@@ -60,6 +60,8 @@ elseif game.PlaceId == 6677573193 then -- Axe Champions
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AxeChampions"))()
 elseif game.PlaceId == 4906055420 then -- Dart Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/DartSimulator"))()
+elseif game.PlaceId == 9477561839 then -- Sticker Monsters Sim
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StickerMontersSim"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
