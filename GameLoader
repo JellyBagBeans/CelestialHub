@@ -62,6 +62,8 @@ elseif game.PlaceId == 4906055420 then -- Dart Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/DartSimulator"))()
 elseif game.PlaceId == 9477561839 then -- Sticker Monsters Sim
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StickerMontersSim"))()
+elseif game.PlaceId == 10715058335 then -- Pet Sim Rex
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorRex"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
