@@ -64,6 +64,8 @@ elseif game.PlaceId == 9477561839 then -- Sticker Monsters Sim
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StickerMontersSim"))()
 elseif game.PlaceId == 10715058335 then -- Pet Sim Rex
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorRex"))()
+elseif game.PlaceId == 8237016877 then -- Sword Quest
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SwordQuest"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
