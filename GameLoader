@@ -66,6 +66,11 @@ elseif game.PlaceId == 10715058335 then -- Pet Sim Rex
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorRex"))()
 elseif game.PlaceId == 8237016877 then -- Sword Quest
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SwordQuest"))()
+elseif game.PlaceId == 2986677229 then -- Giant Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/GiantSimulator"))()
+elseif game.PlaceId == 9387219630 then -- Muscle Clicker
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MuscleClicker"))()
+    
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
