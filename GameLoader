@@ -70,7 +70,8 @@ elseif game.PlaceId == 2986677229 then -- Giant Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/GiantSimulator"))()
 elseif game.PlaceId == 9387219630 then -- Muscle Clicker
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MuscleClicker"))()
-    
+elseif game.PlaceId == 10861112990 then -- AnimeArtifactsSimulator2
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AnimeArtifactsSimulator2"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
