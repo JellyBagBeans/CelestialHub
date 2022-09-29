@@ -72,6 +72,9 @@ elseif game.PlaceId == 9387219630 then -- Muscle Clicker
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MuscleClicker"))()
 elseif game.PlaceId == 10861112990 then -- AnimeArtifactsSimulator2
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AnimeArtifactsSimulator2"))()
+elseif game.PlaceId == 10758589850 then -- Angry Pigs Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AngryPigsSimulator"))()
+    
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
