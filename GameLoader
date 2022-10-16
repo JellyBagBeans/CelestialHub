@@ -76,7 +76,8 @@ elseif game.PlaceId == 10758589850 then -- Angry Pigs Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AngryPigsSimulator"))()
 elseif game.PlaceId == 9195713767 then -- Sword Haven
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SwordHaven"))()
-    
+elseif game.PlaceId == 9625096419 then -- Tapper Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TapperSimulator"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
