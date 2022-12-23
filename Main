@@ -1,4 +1,4 @@
-
+playerCount = 0
 
 if game.CoreGui:FindFirstChild("woof") then
    game.CoreGui.woof:Destroy()
