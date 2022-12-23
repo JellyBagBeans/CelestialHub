@@ -27,6 +27,8 @@ request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 
+local GameName = ""
+
 if game.PlaceId == 8884334497 then -- Mining Clicker Simulator (Group: Spyder Crew)
     GameName = "Mining Clicker Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MiningClickerSim"))()
