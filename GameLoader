@@ -1,3 +1,69 @@
+if game.PlaceId == 8884334497 then -- Mining Clicker Simulator
+    script = "Mining Clicker Simulator"
+elseif game.PlaceId == 7969108904 then -- Clicking Simulator
+    script = "Clicking Simulator"
+elseif game.PlaceId == 9498006165 then -- Tapping Simulator
+    script = "Tapping Simulator"
+elseif game.PlaceId == 9551640993 then -- Mining Simulator 2
+    script = "Mining Simulator 2"
+elseif game.PlaceId == 7606302010 then -- Yo-Yo Simulator
+    script = "YoYo Simulator"
+elseif game.PlaceId == 8818978508 then -- Space Simulator Reborn
+    script = "Space Reborn"
+elseif game.PlaceId == 8962384769 then -- Firework Simulator
+    script = "Firework Simulator"
+elseif game.PlaceId == 8894888083 then -- Pinata Legends
+    script = "Pinata Legends"
+elseif game.PlaceId == 10157366004 then -- Strongest Tapper Simulator
+    script = "Strongest Tapper Simulator"
+elseif game.PlaceId == 10351639671 then -- Anime Legends Simulator
+    script = "Anime Legends Simulator"
+elseif game.PlaceId == 10524502174 then -- One Punch Fighters Simulator
+    script = "One Punch Simulator"
+elseif game.PlaceId == 9157870347 then -- Swarm Simulator
+    script = "Swarm Simulator"
+elseif game.PlaceId == 8571633166 then -- Pet Gods Simulator
+    script = "Pet Gods Simulator"
+elseif game.PlaceId == 8612195438 then -- Clicker Party Simulator
+    script = "Clicker Party Simulator"
+elseif game.PlaceId == 10108131074 then -- Mow The Lawn Simulator
+    script = "Mow The Lawn"
+elseif game.PlaceId == 9336544530 then -- Dice Simulator
+    script = "Dice Simulator"
+elseif game.PlaceId == 10106105124 then -- Wheat Farming Simulator
+    script = "Wheat Farming Simulator"
+elseif game.PlaceId == 9285238704 then -- Race Clicker
+    script = "Race Clicker"
+elseif game.PlaceId == 6875469709 then -- Strongest Punch Simulator
+    script = "Strongest Punch Simulator"
+elseif game.PlaceId == 6284583030 then -- Pet Simulator X
+    script = "Pet Simulator X"
+elseif game.PlaceId == 10321372166 then -- Pet Simulator X HardCore
+    script = "Pet Simulator X (HC)"
+elseif game.PlaceId == 8539647832 then -- Shovel Legends
+    script = "Shovel Legends"
+elseif game.PlaceId == 8750997647 then -- Tapping Legends X
+    script = "Tapping Legends X"
+elseif game.PlaceId == 10141430483 then -- Slaying Legends Simulator
+    script = "Slaying Legends"
+elseif game.PlaceId == 8540346411 then -- Rebirth Champions X
+    script = "Rebirth Champions X"
+elseif game.PlaceId == 4906055420 then -- Dart Simulator
+    script = "Dart Simulator"
+elseif game.PlaceId == 2986677229 then -- Giant Simulator
+    script = "Giant Simulator"
+elseif game.PlaceId == 9387219630 then -- Muscle Clicker
+    script = "Muscle Clicker"
+elseif game.PlaceId == 10861112990 then -- Anime Artifacts Simulator 2
+    script = "Anime Artifacts Simulator2"
+elseif game.PlaceId == 9195713767 then -- Sword Haven
+    script = "Sword Haven"
+elseif game.PlaceId == 9625096419 then -- Tapper Simulator
+    script = "Tapper Simulator"
+else
+    script = "Universal"
+end
+
 local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or 
    pebc_execute and "ProtoSmasher" or
@@ -7,6 +73,7 @@ local webhookcheck =
    SONA_LOADED and "Sona" or
    "Unknown"
 
+
 local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 local url =
    "https://discord.com/api/webhooks/1055754007722856448/9s3j_Hzi2NtdKSLc_r7zVfJmUsnhklAYcv6XTC5csebJjrHKeKjz6DV3Cp0TPXO10asX"
@@ -14,9 +81,9 @@ local data = {
    ["embeds"] = {
        {
            ["title"] = "Username: " .. game.Players.LocalPlayer.Name.."     Executor: "..webhookcheck.."",
-           ["description"] = "Game:" .. GameName.. "",
+           ["description"] = "Game: " .. GameName.. "",
            ["footer"] = { -- Again, has to be stored as a table.
-                ["text"] = "Player Count: ",
+                ["text"] = "Script Using: "..script,
             },
        }
    }
@@ -73,14 +140,22 @@ elseif game.PlaceId == 6284583030 then -- Pet Simulator X
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorX"))()
 elseif game.PlaceId == 10321372166 then -- Pet Simulator X HardCore
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorX"))()
+elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongNinjaSim"))()
+elseif game.PlaceId == 10184360875 then -- Pets & Fishing Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetsFishingSim"))()
 elseif game.PlaceId == 8539647832 then -- Shovel Legends
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ShovelLegends"))()
 elseif game.PlaceId == 8750997647 then -- Tapping Legends X
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TappingLegendsX"))()
+elseif game.PlaceId == 10204162989 then -- Pickaxe Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PickaxeSimulator"))() 
 elseif game.PlaceId == 10141430483 then -- Slaying Legends Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SlayingLegends"))() 
 elseif game.PlaceId == 8540346411 then -- Rebirth Champions X
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RebirthChampionsX"))() 
+elseif game.PlaceId == 6677573193 then -- Axe Champions Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AxeChampions"))()
 elseif game.PlaceId == 4906055420 then -- Dart Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/DartSimulator"))()
 elseif game.PlaceId == 2986677229 then -- Giant Simulator
