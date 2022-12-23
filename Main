@@ -1,4 +1,3 @@
-playerCount = 0
 
 
 if game.CoreGui:FindFirstChild("woof") then
