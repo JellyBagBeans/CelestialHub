@@ -1,15 +1,15 @@
-local playerCount = 0
+-- script1.lua
+local shared = require("Main")
 
 function onPlayerJoin()
-    playerCount = playerCount + 1
+    shared.playerCount = shared.playerCount + 1
 end
-
 function onPlayerLeave()
-    playerCount = playerCount - 1
+    shared.playerCount = shared.playerCount - 1
 end
 
 game.Players.PlayerAdded:Connect(onPlayerJoin)
-game.Players.PlayerAdded:Connect(onPlayerLeave)
+game.Players.PlayerRemoving:Connect(onPlayerLeave)
 
 local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or 
