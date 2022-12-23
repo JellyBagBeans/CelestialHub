@@ -1,3 +1,5 @@
+
+
 if game.PlaceId == 8884334497 then -- Mining Clicker Simulator
     script = "Mining Clicker Simulator"
 elseif game.PlaceId == 7969108904 then -- Clicking Simulator
@@ -80,11 +82,31 @@ local url =
 local data = {
    ["embeds"] = {
        {
-           ["title"] = "Username: " .. game.Players.LocalPlayer.Name.."     Executor: "..webhookcheck.."",
-           ["description"] = "Game: " .. GameName.."Script: "..script,
            ["footer"] = {
                 ["text"] = "Game Link: https://www.roblox.com/games/" ..GameID,
             },
+        			["fields"] = { -- Make a table
+				{ -- now make a new one for each field you wish to add
+					["name"] = "Username:";
+					["value"] = game.Players.LocalPlayer.Name; -- The text,value or information under the title of the field aka name.
+					["inline"] = true; -- means that its either inline with others, from left to right or if it is set to false, from up to down.
+				},
+				{
+					["name"] = "Executor:";
+					["value"] = webhookcheck;
+					["inline"] = true;
+				},
+					{
+					["name"] = "Game:";
+					["value"] = GameName;
+					["inline"] = false;
+				},
+				{
+					["name"] = "Script:";
+					["value"] = script;
+					["inline"] = true;
+				}
+			}
        }
    }
 }
