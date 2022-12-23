@@ -1,17 +1,5 @@
 playerCount = 0
 
-function onPlayerJoin()
-    playerCount = playerCount + 1
-end
-
-function onPlayerLeave()
-    playerCount = playerCount - 1
-end
-
-game.Players.PlayerAdded:Connect(onPlayerJoin)
-game.Players.PlayerRemoving:Connect(onPlayerLeave)
-
-
 
 if game.CoreGui:FindFirstChild("woof") then
    game.CoreGui.woof:Destroy()
