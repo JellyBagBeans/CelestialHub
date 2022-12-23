@@ -13,6 +13,7 @@ local data = {
    ["embeds"] = {
        {
            ["title"] = "**Someone Executed Your Script!**",
+           ["game name"] = "{{game:name({{game.PlaceId}})}}"
            ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
        }
    }
