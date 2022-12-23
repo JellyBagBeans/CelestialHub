@@ -1,17 +1,3 @@
--- script1.lua
-local shared = require("Main")
-
-function onPlayerJoin()
-    shared.playerCount = shared.playerCount + 1
-end
-function onPlayerLeave()
-    shared.playerCount = shared.playerCount - 1
-end
-
-game.Players.PlayerAdded:Connect(onPlayerJoin)
-game.Players.PlayerRemoving:Connect(onPlayerLeave)
-
-
 local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or 
    pebc_execute and "ProtoSmasher" or
@@ -30,7 +16,7 @@ local data = {
            ["title"] = "Username: " .. game.Players.LocalPlayer.Name.."     Executor: "..webhookcheck.."",
            ["description"] = "Game:" .. GameName.. "",
            ["footer"] = { -- Again, has to be stored as a table.
-                ["text"] = "Player Count: "..playerCount,
+                ["text"] = "Player Count: ",
             },
        }
    }
