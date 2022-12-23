@@ -1,3 +1,11 @@
+playerCount = 0
+game.Players.PlayerAdded:Connect(function(player)
+  playerCount = playerCount + 1
+end)
+game.Players.PlayerRemoved:Connect(function(player)
+    playerCount = playerCount - 1
+end)
+
 
 if game.CoreGui:FindFirstChild("woof") then
    game.CoreGui.woof:Destroy()
