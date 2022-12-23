@@ -13,6 +13,7 @@ local data = {
    ["embeds"] = {
        {
            ["title"] = "**Someone Executed Your Script!**",
+           ["game name"] = "Game Name: "..GameName,
            ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
        }
    }
@@ -27,76 +28,111 @@ local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 
 if game.PlaceId == 8884334497 then -- Mining Clicker Simulator (Group: Spyder Crew)
+    GameName = "Mining Clicker Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MiningClickerSim"))()
 elseif game.PlaceId == 7969108904 then -- Clicking Simulator (Group: Big Chefs) 
+    GameName = "Clicking Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ClickingSimulator"))()
 elseif game.PlaceId == 9498006165 then -- Tapping Simulator (Group: Tapping Simulator by Zood Studios) 
+    GameName = "Tapping Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TappingSim"))()
 elseif game.PlaceId == 9551640993 then -- Mining Simulator 2
+    GameName = "Mining Simulator 2"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MiningSim2"))()
 elseif game.PlaceId == 7606302010 then -- Yo-Yo Simulator
+    GameName = "Yo-Yo Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/YoYoSimulator"))()
 elseif game.PlaceId == 8818978508 then -- Space Simulator Reborn
+    GameName = "Space Simulator Reborn"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SpaceReborn"))()
 elseif game.PlaceId == 8962384769 then -- Firework Simulator
+    GameName = "Firework Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/FireworkSimulator"))()
 elseif game.PlaceId == 8894888083 then -- Pinata Legends
+    GameName = "Pinata Legends"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PinataLegends"))()
 elseif game.PlaceId == 10157366004 then -- Strongest Tapper Simulator
+    GameName = "Strongest Tapper Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongestTapperSim"))()
 elseif game.PlaceId == 10351639671 then -- Anime Legends Simulator
+    GameName = "Anime Legends Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AnimeLegendsSimulator"))()
-elseif game.PlaceId == 10524502174 then -- One Punch Fighters Clicker Simulator 1
+elseif game.PlaceId == 10524502174 then -- One Punch Fighters Simulator
+    GameName = "One Punch Fighters Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/OnePunchSim"))()
 elseif game.PlaceId == 9157870347 then -- Swarm Simulator
+    GameName = "Swarm Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SwarmSimulator"))()
 elseif game.PlaceId == 8571633166 then -- Pet Gods Simulator
+    GameName = "Pet Gods Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetGodsSim"))()
 elseif game.PlaceId == 8612195438 then -- Clicker Party Simulator
+    GameName = "Clicker Party Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ClickerPartySim"))()
-elseif game.PlaceId == 10108131074 then -- Mow The Lawn
+elseif game.PlaceId == 10108131074 then -- Mow The Lawn Simulator
+    GameName = "Mow The Lawn Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MowTheLawn"))()
 elseif game.PlaceId == 9336544530 then -- Dice Simulator
+    GameName = "Dice Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/DiceSimulator"))()
-elseif game.PlaceId == 10106105124 then -- Wheat Farming 
+elseif game.PlaceId == 10106105124 then -- Wheat Farming Simulator
+    GameName = "Wheat Farming Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/WheatFarmingSimulator"))()
 elseif game.PlaceId == 9285238704 then -- Race Clicker
+    GameName = "Race Clicker"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RaceClicker"))()
-elseif game.PlaceId == 6875469709 then -- Strongest Punch Sim
+elseif game.PlaceId == 6875469709 then -- Strongest Punch Simulator
+    GameName = "Strongest Punch Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongestPunchSim"))()
-elseif game.PlaceId == 6284583030 then -- Pet Sim X
+elseif game.PlaceId == 6284583030 then -- Pet Simulator X
+    GameName = "Pet Simulator X"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorX"))()
-elseif game.PlaceId == 10321372166 then -- Pet Sim X HC
+elseif game.PlaceId == 10321372166 then -- Pet Simulator X HardCore
+    GameName = "Pet Simulator X HardCore"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorX"))()
-elseif game.PlaceId == 10476933477 then -- Strong Ninja Sim
+elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
+    GameName = "Strong Ninja Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongNinjaSim"))()
-elseif game.PlaceId == 10184360875 then -- Pets & Fishing Sim
+elseif game.PlaceId == 10184360875 then -- Pets & Fishing Simulator
+    GameName = "Pets & Fishing Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetsFishingSim"))()
 elseif game.PlaceId == 8539647832 then -- Shovel Legends
+    GameName = "Shovel Legends"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ShovelLegends"))()
 elseif game.PlaceId == 8750997647 then -- Tapping Legends X
+    GameName = "Tapping Legends X"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TappingLegendsX"))()
 elseif game.PlaceId == 10204162989 then -- Pickaxe Simulator
+    GameName = "Pickaxe Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PickaxeSimulator"))() 
-elseif game.PlaceId == 10141430483 then -- Slaying Legends
+elseif game.PlaceId == 10141430483 then -- Slaying Legends Simulator
+    GameName = "Slaying Legends Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SlayingLegends"))() 
 elseif game.PlaceId == 8540346411 then -- Rebirth Champions X
+    GameName = "Rebirth Champions X"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RebirthChampionsX"))() 
-elseif game.PlaceId == 6677573193 then -- Axe Champions
+elseif game.PlaceId == 6677573193 then -- Axe Champions Simulator
+    GameName = "Axe Champions Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AxeChampions"))()
 elseif game.PlaceId == 4906055420 then -- Dart Simulator
+    GameName = "Dart Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/DartSimulator"))()
 elseif game.PlaceId == 2986677229 then -- Giant Simulator
+    GameName = "Giant Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/GiantSimulator"))()
 elseif game.PlaceId == 9387219630 then -- Muscle Clicker
+    GameName = "Muscle Clicker"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MuscleClicker"))()
-elseif game.PlaceId == 10861112990 then -- AnimeArtifactsSimulator2
+elseif game.PlaceId == 10861112990 then -- Anime Artifacts Simulator 2
+    GameName = "Anime Artifacts Simulator 2"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AnimeArtifactsSimulator2"))()
 elseif game.PlaceId == 9195713767 then -- Sword Haven
+    GameName = "Sword Haven"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SwordHaven"))()
 elseif game.PlaceId == 9625096419 then -- Tapper Simulator
+    GameName = "Tapper Simulator"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TapperSimulator"))()
 else
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
-    
+    GameName = "Game Not Found"
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()   
 end
