@@ -1,16 +1,3 @@
-local playerCount = 0
-
-function onPlayerJoin()
-    playerCount = playerCount + 1
-end
-
-function onPlayerLeave()
-    playerCount = playerCount - 1
-end
-
-game.Players.PlayerAdded:Connect(onPlayerJoin)
-game.Players.PlayerRemoving:Connect(onPlayerLeave)
-
 local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or 
    pebc_execute and "ProtoSmasher" or
