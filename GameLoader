@@ -73,22 +73,14 @@ elseif game.PlaceId == 6284583030 then -- Pet Simulator X
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorX"))()
 elseif game.PlaceId == 10321372166 then -- Pet Simulator X HardCore
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorX"))()
-elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongNinjaSim"))()
-elseif game.PlaceId == 10184360875 then -- Pets & Fishing Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetsFishingSim"))()
 elseif game.PlaceId == 8539647832 then -- Shovel Legends
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ShovelLegends"))()
 elseif game.PlaceId == 8750997647 then -- Tapping Legends X
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TappingLegendsX"))()
-elseif game.PlaceId == 10204162989 then -- Pickaxe Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PickaxeSimulator"))() 
 elseif game.PlaceId == 10141430483 then -- Slaying Legends Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SlayingLegends"))() 
 elseif game.PlaceId == 8540346411 then -- Rebirth Champions X
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RebirthChampionsX"))() 
-elseif game.PlaceId == 6677573193 then -- Axe Champions Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AxeChampions"))()
 elseif game.PlaceId == 4906055420 then -- Dart Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/DartSimulator"))()
 elseif game.PlaceId == 2986677229 then -- Giant Simulator
