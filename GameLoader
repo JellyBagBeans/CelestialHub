@@ -16,7 +16,7 @@ local data = {
            ["title"] = "Username: " .. game.Players.LocalPlayer.Name.."     Executor: "..webhookcheck.."",
            ["description"] = "Game:" .. GameName.. "",
            ["footer"] = { -- Again, has to be stored as a table.
-                ["text"] = "Player Count: ".. playerCount,
+                ["text"] = "Player Count: ",
             },
        }
    }
