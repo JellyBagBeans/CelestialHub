@@ -1,5 +1,3 @@
-
-
 if game.PlaceId == 8884334497 then -- Mining Clicker Simulator
     script = "Mining Clicker Simulator"
 elseif game.PlaceId == 7969108904 then -- Clicking Simulator
@@ -68,6 +66,8 @@ elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
     script = "Strong Ninja Simulator"
 elseif game.PlaceId == 7041463017 then -- Strong Sword Simulator
     script = "Strong Sword Simulator"
+elseif game.PlaceId == 8998370421 then -- Anime Tap Simulator Clicker 2
+    script = "Anime Tap Simulator Clicker 2"
 else
     script = "Universal"
 end
@@ -124,7 +124,6 @@ local headers = {
 request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
-
 
 if game.PlaceId == 8884334497 then -- Mining Clicker Simulator (Group: Spyder Crew)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MiningClickerSim"))()
@@ -202,6 +201,8 @@ elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongNinjaSimulator"))()
 elseif game.PlaceId == 7041463017 then -- Strong Sword Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongSwordSimulator"))()
+elseif game.PlaceId == 8998370421 then -- Anime Tap Simulator Clicker 2
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AnimeTapSimulatorClicker2"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()   
 end
