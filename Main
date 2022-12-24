@@ -477,14 +477,14 @@ function Mainholder:Window(hubname, gamename, discordlink, halflink)
    DiscordCorner.Name = "DiscordCorner"
    DiscordCorner.Parent = Discord
    
-   Feedback.Name = "Discord"
+   Feedback.Name = "Feedback"
    Feedback.Parent = MainFrameholder
    Feedback.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
    Feedback.Position = UDim2.new(0.0321919285, 0, 6.312419981, 0)
    Feedback.Size = UDim2.new(0, 170, 0, 40)
    Feedback.AutoButtonColor = false
    Feedback.Font = Enum.Font.Gotham
-   Feedback.Text = "Discord"
+   Feedback.Text = "Feedback"
    Feedback.TextColor3 = Color3.fromRGB(255, 255, 255)
    Feedback.TextSize = 20.000
 
