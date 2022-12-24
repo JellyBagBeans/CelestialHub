@@ -64,6 +64,8 @@ elseif game.PlaceId == 9625096419 then -- Tapper Simulator
     script = "Tapper Simulator"
 elseif game.PlaceId == 9941633436 then -- Rank Simulator
     script = "Rank Simulator"
+elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
+    script = "Strong Ninja Simulator"
 else
     script = "Universal"
 end
@@ -194,6 +196,8 @@ elseif game.PlaceId == 9625096419 then -- Tapper Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TapperSimulator"))()
 elseif game.PlaceId == 9941633436 then -- Rank Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RankSimulator"))()
+elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongNinjaSimulator"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()   
 end
