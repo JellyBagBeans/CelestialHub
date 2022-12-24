@@ -1,0 +1,75 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/joeengo/exploiting/main/EngoUILIB_V2.lua", true))()
+
+local main = library:CreateMain("Reviews & Suggestions:", "", Enum.KeyCode.LeftAlt)
+
+local tab = main:CreateTab("Review")
+
+tab:CreateSlider("Rate Us!",1,10, function(value)
+   rating = value
+end);
+
+tab:CreateTextbox("Leave Review!", function(value)
+   userInput = value
+end);
+
+tab:CreateTextbox("Suggestion?", function(value)
+    suggestion = value
+end);
+
+tab:CreateButton("Submit Review", function(value)
+    getgenv().EngoUILib:Destroy()
+
+GameID = game.PlaceId
+local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+local url =
+   "https://webhook.lewisakura.moe/api/webhooks/1055938409371291649/Ecyhl5FibaSvhb82lFwNTHZi1PLcneOVPO-gV4vRwukEnKQVrVyEcOOTg_Mozgl3TbZQ"
+local data = {
+   ["embeds"] = {
+       {
+           ["footer"] = {
+                ["text"] = "Game Link: https://www.roblox.com/games/" ..GameID,
+            },
+                    ["fields"] = { -- Make a table
+                { -- now make a new one for each field you wish to add
+                    ["name"] = "Username:";
+                    ["value"] = game.Players.LocalPlayer.Name; -- The text,value or information under the title of the field aka name.
+                    ["inline"] = true; -- means that its either inline with others, from left to right or if it is set to false, from up to down.
+                },
+                    {
+                    ["name"] = "Game:";
+                    ["value"] = GameName;
+                    ["inline"] = true;
+                },
+                    {
+                    ["name"] = "Feedback:";
+                    ["value"] = userInput;
+                    ["inline"] = false;
+                },
+                    {
+                    ["name"] = "Suggestion:";
+                    ["value"] = suggestion;
+                    ["inline"] = false;
+                },
+                    {
+                    ["name"] = "Rating:";
+                    ["value"] = rating.. "/10";
+                    ["inline"] = false;
+                },
+            }
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Thank you for Review!", -- Required
+	Text = "Have a blessed day!", -- Required
+})
+end);
