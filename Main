@@ -522,6 +522,7 @@ function Mainholder:Window(hubname, gamename, discordlink, halflink)
 		setclipboard("https://discord.gg/wVjn9m5Ac5")
 		game:GetService("StarterGui"):SetCore("SendNotification",{
 			Title = "Celestial Hub", -- Required
+			Text = "Discord has been copied to clipboard!", -- Required
 		})
    end)
    
