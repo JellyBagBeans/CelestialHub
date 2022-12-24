@@ -480,7 +480,7 @@ function Mainholder:Window(hubname, gamename, discordlink, feedbackloadstring, h
    Feedback.Name = "Feedback"
    Feedback.Parent = MainFrameholder
    Feedback.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-   Feedback.Position = UDim2.new(0.0321919285, 0, 0.312419981, 0)
+   Feedback.Position = UDim2.new(0.0321919285, 0, -.312419981, 0)
    Feedback.Size = UDim2.new(0, 170, 0, 40)
    Feedback.AutoButtonColor = false
    Feedback.Font = Enum.Font.Gotham
