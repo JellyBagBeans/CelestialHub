@@ -62,6 +62,8 @@ elseif game.PlaceId == 9195713767 then -- Sword Haven
     script = "Sword Haven"
 elseif game.PlaceId == 9625096419 then -- Tapper Simulator
     script = "Tapper Simulator"
+elseif game.PlaceId == 9941633436 then -- Rank Simulator
+    script = "Rank Simulator"
 else
     script = "Universal"
 end
@@ -190,6 +192,8 @@ elseif game.PlaceId == 9195713767 then -- Sword Haven
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SwordHaven"))()
 elseif game.PlaceId == 9625096419 then -- Tapper Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TapperSimulator"))()
+elseif game.PlaceId == 9941633436 then -- Rank Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RankSimulator"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()   
 end
