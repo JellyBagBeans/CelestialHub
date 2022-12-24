@@ -519,10 +519,10 @@ function Mainholder:Window(hubname, gamename, discordlink, feedbackloadstring, h
    end)
 
 	Feedback.MouseButton1Click:Connect(function()
-		setclipboard("loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Review", true))()")
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Review", true))()
 		game:GetService("StarterGui"):SetCore("SendNotification",{
 			Title = "Celestial Hub", -- Required
-			Text = "Feedback has been copied to clipboard!", -- Required
+			Text = "Opening Reviews/Feedback", -- Required
 		})
    end)
    
