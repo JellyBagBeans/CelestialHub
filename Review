@@ -36,9 +36,14 @@ local data = {
                     ["inline"] = true; -- means that its either inline with others, from left to right or if it is set to false, from up to down.
                 },
                     {
+                    ["name"] = "Rating:";
+                    ["value"] = rating.. "/10";
+                    ["inline"] = true;
+                },
+                    {
                     ["name"] = "Game:";
                     ["value"] = GameName;
-                    ["inline"] = true;
+                    ["inline"] = false;
                 },
                     {
                     ["name"] = "Feedback:";
@@ -48,11 +53,6 @@ local data = {
                     {
                     ["name"] = "Suggestion:";
                     ["value"] = suggestion;
-                    ["inline"] = false;
-                },
-                    {
-                    ["name"] = "Rating:";
-                    ["value"] = rating.. "/10";
                     ["inline"] = false;
                 },
             }
