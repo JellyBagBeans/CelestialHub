@@ -116,6 +116,8 @@ function Mainholder:Window(hubname, gamename, discordlink, halflink)
    local OpenCloseCorner = Instance.new("UICorner")
    local Discord = Instance.new("TextButton")
    local DiscordCorner = Instance.new("UICorner")
+   local Feedback = Instance.new("TextButton")
+   local FeedbackCorner = Instance.new("UICorner")
    local Keybind = Instance.new("TextButton")
    local TextKeybind = Instance.new("TextLabel")
    local BindText = Instance.new("TextLabel")
@@ -474,6 +476,58 @@ function Mainholder:Window(hubname, gamename, discordlink, halflink)
    DiscordCorner.CornerRadius = UDim.new(0, 6)
    DiscordCorner.Name = "DiscordCorner"
    DiscordCorner.Parent = Discord
+   
+   Feedback.Name = "Discord"
+   Feedback.Parent = MainFrameholder
+   Feedback.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+   Feedback.Position = UDim2.new(0.0321919285, 0, 0.312419981, 0)
+   Feedback.Size = UDim2.new(0, 170, 0, 40)
+   Feedback.AutoButtonColor = false
+   Feedback.Font = Enum.Font.Gotham
+   Feedback.Text = "Discord"
+   Feedback.TextColor3 = Color3.fromRGB(255, 255, 255)
+   Feedback.TextSize = 20.000
+
+   Feedback.MouseEnter:Connect(function()
+      TweenService:Create(
+         Feedback,
+         TweenInfo.new(.3, Enum.EasingStyle.Quad),
+         {BackgroundColor3 = Color3.fromRGB(45, 45, 45)}
+      ):Play()
+   end)
+
+   Feedback.MouseLeave:Connect(function()
+      TweenService:Create(
+         Feedback,
+         TweenInfo.new(.3, Enum.EasingStyle.Quad),
+         {BackgroundColor3 = Color3.fromRGB(35, 35, 35)}
+      ):Play()
+   end)
+
+   Feedback.MouseButton1Click:Connect(function()
+      Feedback.TextSize = 0
+      TweenService:Create(
+         Feedback,
+         TweenInfo.new(.3, Enum.EasingStyle.Quad),
+         {TextSize = 25.000}
+      ):Play()
+      TweenService:Create(
+         Discord,
+         TweenInfo.new(.3, Enum.EasingStyle.Quad),
+         {TextSize = 20.000}
+      ):Play()
+   end)
+
+	Feedback.MouseButton1Click:Connect(function()
+		setclipboard("https://discord.gg/wVjn9m5Ac5")
+		game:GetService("StarterGui"):SetCore("SendNotification",{
+			Title = "Celestial Hub", -- Required
+		})
+   end)
+   
+   FeedbackCorner.CornerRadius = UDim.new(0, 6)
+   FeedbackCorner.Name = "FeedbackCorner"
+   FeedbackCorner.Parent = Feedback
    
    
    Keybind.Name = "Keybind"
