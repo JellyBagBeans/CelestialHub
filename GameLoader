@@ -82,7 +82,7 @@ local webhookcheck =
 GameID = game.PlaceId
 local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 local url =
-   "https://hooks.hyra.io/api/webhooks/1056092942374277182/oc8DvIfILq8vVssmUQwdkaluQWIWfzg00L4PQ8yxKpXwzgqck39sd0unheUf-tUHN0d8"
+   "https://webhook.lewisakura.moe/api/webhooks/1056092942374277182/oc8DvIfILq8vVssmUQwdkaluQWIWfzg00L4PQ8yxKpXwzgqck39sd0unheUf-tUHN0d8"
 local data = {
    ["embeds"] = {
        {
