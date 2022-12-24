@@ -98,7 +98,7 @@ local woof = Instance.new("ScreenGui")
 woof.Name = "woof"
 woof.Parent = game.CoreGui
 
-function Mainholder:Window(hubname, gamename, discordlink, halflink)
+function Mainholder:Window(hubname, gamename, discordlink, feedbacklink, halflink)
    local FirstTab = false
 
    local MainFrame = Instance.new("Frame")
@@ -522,7 +522,7 @@ function Mainholder:Window(hubname, gamename, discordlink, halflink)
 		setclipboard("https://discord.gg/wVjn9m5Ac5")
 		game:GetService("StarterGui"):SetCore("SendNotification",{
 			Title = "Celestial Hub", -- Required
-			Text = "Discord has been copied to clipboard!", -- Required
+			Text = "Feedback has been copied to clipboard!", -- Required
 		})
    end)
    
