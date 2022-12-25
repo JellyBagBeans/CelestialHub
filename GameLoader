@@ -68,6 +68,8 @@ elseif game.PlaceId == 7041463017 then -- Strong Sword Simulator
     script = "Strong Sword Simulator"
 elseif game.PlaceId == 8998370421 then -- Anime Tap Simulator Clicker 2
     script = "Anime Tap Simulator Clicker 2"
+elseif game.PlaceId == 10709624738 then -- Button Simulator Rarity
+    script = "Button Simulator Rarity"
 else
     script = "Universal"
 end
@@ -203,6 +205,8 @@ elseif game.PlaceId == 7041463017 then -- Strong Sword Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongSwordSimulator"))()
 elseif game.PlaceId == 8998370421 then -- Anime Tap Simulator Clicker 2
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AnimeTapSimulatorClicker2"))()
+elseif game.PlaceId == 10709624738 then -- Button Simulator Rarity
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ButtonSimulatorRarity"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()   
 end
