@@ -14,7 +14,7 @@ elseif game.PlaceId == 8962384769 then -- Firework Simulator
     script = "Firework Simulator"
 elseif game.PlaceId == 8894888083 then -- Pinata Legends
     script = "Pinata Legends"
-elseif game.PlaceId == 11254130090 then -- Strongest Tapper Simulator
+elseif game.PlaceId == 11374030763 then -- Strongest Tapper Simulator
     script = "Strongest Tapper Simulator"
 elseif game.PlaceId == 10351639671 then -- Anime Legends Simulator
     script = "Anime Legends Simulator"
@@ -143,7 +143,7 @@ elseif game.PlaceId == 8962384769 then -- Firework Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/FireworkSimulator"))()
 elseif game.PlaceId == 8894888083 then -- Pinata Legends
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PinataLegends"))()
-elseif game.PlaceId == 11254130090 then -- Strongest Tapper Simulator
+elseif game.PlaceId == 11374030763 then -- Strongest Tapper Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongestTapperSimulator"))()
 elseif game.PlaceId == 10351639671 then -- Anime Legends Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AnimeLegendsSimulator"))()
