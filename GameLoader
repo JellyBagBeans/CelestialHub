@@ -44,8 +44,6 @@ elseif game.PlaceId == 4906055420 then -- Dart Simulator
     script = "Dart Simulator"
 elseif game.PlaceId == 2986677229 then -- Giant Simulator
     script = "Giant Simulator"
-elseif game.PlaceId == 9195713767 then -- Sword Haven
-    script = "Sword Haven"
 elseif game.PlaceId == 9625096419 then -- Tapper Simulator
     script = "Tapper Simulator"
 elseif game.PlaceId == 9941633436 then -- Rank Simulator
@@ -167,8 +165,6 @@ elseif game.PlaceId == 4906055420 then -- Dart Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/DartSimulator"))()
 elseif game.PlaceId == 2986677229 then -- Giant Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/GiantSimulator"))()
-elseif game.PlaceId == 9195713767 then -- Sword Haven
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SwordHaven"))()
 elseif game.PlaceId == 9625096419 then -- Tapper Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TapperSimulator"))()
 elseif game.PlaceId == 9941633436 then -- Rank Simulator
