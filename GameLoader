@@ -1,7 +1,5 @@
 if game.PlaceId == 8884334497 then -- Mining Clicker Simulator
     script = "Mining Clicker Simulator"
-elseif game.PlaceId == 7969108904 then -- Clicking Simulator
-    script = "Clicking Simulator"
 elseif game.PlaceId == 9498006165 then -- Tapping Simulator
     script = "Tapping Simulator"
 elseif game.PlaceId == 9551640993 then -- Mining Simulator 2
@@ -127,8 +125,6 @@ request(abcdef)
 
 if game.PlaceId == 8884334497 then -- Mining Clicker Simulator (Group: Spyder Crew)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MiningClickerSim"))()
-elseif game.PlaceId == 7969108904 then -- Clicking Simulator (Group: Big Chefs) 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ClickingSimulator"))()
 elseif game.PlaceId == 9498006165 then -- Tapping Simulator (Group: Tapping Simulator by Zood Studios) 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TappingSim"))()
 elseif game.PlaceId == 9551640993 then -- Mining Simulator 2
