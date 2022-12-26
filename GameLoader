@@ -36,8 +36,6 @@ elseif game.PlaceId == 6284583030 then -- Pet Simulator X
     script = "Pet Simulator X"
 elseif game.PlaceId == 10321372166 then -- Pet Simulator X HardCore
     script = "Pet Simulator X (HC)"
-elseif game.PlaceId == 8539647832 then -- Shovel Legends
-    script = "Shovel Legends"
 elseif game.PlaceId == 8750997647 then -- Tapping Legends X
     script = "Tapping Legends X"
 elseif game.PlaceId == 10141430483 then -- Slaying Legends Simulator
@@ -159,8 +157,6 @@ elseif game.PlaceId == 10321372166 then -- Pet Simulator X HardCore
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorX"))()
 elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongNinjaSim"))()
-elseif game.PlaceId == 8539647832 then -- Shovel Legends
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ShovelLegends"))()
 elseif game.PlaceId == 8750997647 then -- Tapping Legends X
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TappingLegendsX"))()
 elseif game.PlaceId == 10204162989 then -- Pickaxe Simulator
