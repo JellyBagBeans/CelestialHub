@@ -52,7 +52,7 @@ elseif game.PlaceId == 8998370421 then -- Anime Tap Simulator Clicker 2
     script = "Anime Tap Simulator Clicker 2"
 elseif game.PlaceId == 10709624738 then -- Button Simulator Rarity
     script = "Button Simulator Rarity"
-elseif game.PlaceId == 10709624738 then -- Fishing Sim
+elseif game.PlaceId == 2866967438 then -- Fishing Sim
     script = "Fishing Simulator"
 else
     script = "Universal"
@@ -192,7 +192,7 @@ elseif game.PlaceId == 8998370421 then -- Anime Tap Simulator Clicker 2
 elseif game.PlaceId == 10709624738 then -- Button Simulator Rarity
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ButtonSimulatorRarity"))()
     
-elseif game.PlaceId == 10709624738 then -- Fishing Sim
+elseif game.PlaceId ==  2866967438 then -- Fishing Sim
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/FishingSimulator"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()   
