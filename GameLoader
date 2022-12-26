@@ -16,8 +16,6 @@ elseif game.PlaceId == 10351639671 then -- Anime Legends Simulator
     script = "Anime Legends Simulator"
 elseif game.PlaceId == 10524502174 then -- One Punch Fighters Simulator
     script = "One Punch Simulator"
-elseif game.PlaceId == 9157870347 then -- Swarm Simulator
-    script = "Swarm Simulator"
 elseif game.PlaceId == 8571633166 then -- Pet Gods Simulator
     script = "Pet Gods Simulator"
 elseif game.PlaceId == 8612195438 then -- Clicker Party Simulator
@@ -135,8 +133,6 @@ elseif game.PlaceId == 10351639671 then -- Anime Legends Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AnimeLegendsSimulator"))()
 elseif game.PlaceId == 10524502174 then -- One Punch Fighters Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/OnePunchSim"))()
-elseif game.PlaceId == 9157870347 then -- Swarm Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SwarmSimulator"))()
 elseif game.PlaceId == 8571633166 then -- Pet Gods Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetGodsSim"))()
 elseif game.PlaceId == 8612195438 then -- Clicker Party Simulator
