@@ -54,8 +54,6 @@ elseif game.PlaceId == 2986677229 then -- Giant Simulator
     script = "Giant Simulator"
 elseif game.PlaceId == 9387219630 then -- Muscle Clicker
     script = "Muscle Clicker"
-elseif game.PlaceId == 10861112990 then -- Anime Artifacts Simulator 2
-    script = "Anime Artifacts Simulator2"
 elseif game.PlaceId == 9195713767 then -- Sword Haven
     script = "Sword Haven"
 elseif game.PlaceId == 9625096419 then -- Tapper Simulator
@@ -191,8 +189,6 @@ elseif game.PlaceId == 2986677229 then -- Giant Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/GiantSimulator"))()
 elseif game.PlaceId == 9387219630 then -- Muscle Clicker
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MuscleClicker"))()
-elseif game.PlaceId == 10861112990 then -- Anime Artifacts Simulator 2
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AnimeArtifactsSimulator2"))()
 elseif game.PlaceId == 9195713767 then -- Sword Haven
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SwordHaven"))()
 elseif game.PlaceId == 9625096419 then -- Tapper Simulator
