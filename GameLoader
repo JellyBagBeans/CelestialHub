@@ -56,6 +56,8 @@ elseif game.PlaceId == 2866967438 then -- Fishing Simulator
     script = "Fishing Simulator"
 elseif game.PlaceId == 10861112990 then -- Anime Artifacts Simulator 2
     script = "Anime Artifacts Simulator 2"
+elseif game.PlaceId == 5055081323 then -- Swordman Simulator
+    script = "Swordman Simulator"
 else
     script = "Universal"
 end
@@ -199,7 +201,10 @@ elseif game.PlaceId ==  2866967438 then -- Fishing Simulator
     
 elseif game.PlaceId ==  10861112990 then -- Anime Artifacts Simulator 2
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AnimeArtifactsSimulator2"))()
+    
+elseif game.PlaceId ==  5055081323 then -- Swordman Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SwordmanSimulator"))()
+    
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()   
-    
 end
