@@ -197,7 +197,7 @@ elseif game.PlaceId == 10709624738 then -- Button Simulator Rarity
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ButtonSimulatorRarity"))()
     
 elseif game.PlaceId ==  2866967438 then -- Fishing Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/FishingSimulator"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
     
 elseif game.PlaceId ==  10861112990 then -- Anime Artifacts Simulator 2
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AnimeArtifactsSimulator2"))()
