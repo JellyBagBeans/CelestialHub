@@ -60,6 +60,8 @@ elseif game.PlaceId == 5055081323 then -- Swordman Simulator
     script = "Swordman Simulator"
 elseif game.PlaceId == 9796685905 then -- Swordman Simulator
     script = "Super Hero Clicker Race"
+elseif game.PlaceId == 10821317529 then -- Pickaxe Mining Simulator
+    script = "Pickaxe Mining Simulator"
 else
     script = "Universal"
 end
@@ -209,6 +211,9 @@ elseif game.PlaceId ==  5055081323 then -- Swordman Simulator
     
 elseif game.PlaceId ==  9796685905 then -- Super Hero Clicker Race
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SuperHeroClickerRace"))()
+    
+elseif game.PlaceId ==  10821317529 then -- Pickaxe Mining Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PickaxeMiningSimulator"))()
     
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()   
