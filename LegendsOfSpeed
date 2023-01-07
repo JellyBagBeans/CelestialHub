@@ -1,0 +1,281 @@
+if game.CoreGui:FindFirstChild("Mana") then
+    game.CoreGui.Mana:Destroy()
+end
+
+local UIlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Main"))()
+
+for i,v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
+    v:Disable()
+end
+
+   local Win = UIlib:Window("Welcome","".. game.Players.LocalPlayer.Name)
+   local AutoFarmTab = Win:Tab("Auto Farm")
+   local AutoCrystalsTab = Win:Tab("Auto Crystals")
+   local ExtraTab = Win:Tab("Extra")
+   local PlayerTab = Win:Tab("Player")
+
+local TweenService = game:GetService("TweenService")
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:wait()
+local rootpart  = character.HumanoidRootPart
+
+AutoFarmTab:Toggle("Auto Collect All Orbs And Gems", false, function(a)
+    AutoCollectAllOrbsAndGems = a
+end)
+
+AutoFarmTab:Toggle("Auto Collect All Orbs", false, function(a)
+    AutoCollectAllOrbs = a
+end)
+
+AutoFarmTab:Toggle("Auto Collect All Gems", false, function(a)
+    AutoCollectAllGems = a
+end)
+
+AutoFarmTab:Toggle("Auto Collect All Hoops", false, function(a)
+    AutoCollectAllHoops = a
+end)
+ 
+AutoFarmTab:Toggle("Auto Rebirth", false, function(a)
+    AutoRebirth = a
+end)
+
+Crystals = {}
+selectedCrystal = ""
+for i,v in pairs(game:GetService("Workspace").mapCrystalsFolder:GetChildren()) do
+    if string.find(v.Name,"") then
+        table.insert(Crystals,v.Name)
+    end
+end
+ 
+AutoCrystalsTab:Dropdown("Select Crystal",Crystals, function(a)
+    selectedCrystal = a
+end)
+ 
+AutoCrystalsTab:Toggle("Auto Open 1 Crystal", false, function(b)
+    AutoOpen1Crystal = b
+end)
+
+AutoCrystalsTab:Button("Teleport To Crystal", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").mapCrystalsFolder[selectedCrystal].Crystal.Base.CFrame
+end)
+
+ExtraTab:Button("Claim All Reward Chests", function()
+    for i,v in pairs(game:GetService("Workspace").rewardChests:GetDescendants()) do
+        if v.Name == "TouchInterest" then
+            firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+            firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
+        end
+    end
+end)
+
+task.spawn(function()
+    while task.wait() do
+        if AutoCollectAllOrbsAndGems then
+            pcall(function()
+                coroutine.wrap(function()
+                for i,v in pairs(game:GetService("Workspace").orbFolder:GetDescendants()) do
+                    if v.Name == "TouchInterest" then
+                        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+                        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
+                    end
+                end
+end)()
+end)
+end
+end
+end)
+
+task.spawn(function()
+    while task.wait() do
+        if AutoCollectAllOrbs then
+            pcall(function()
+                coroutine.wrap(function()
+                for i,v in pairs(game:GetService("Workspace").orbFolder:GetDescendants()) do
+                    if v.Name == "TouchInterest" and not string.find(v.Parent.Parent.Name,"Gem") then
+                        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+                        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
+                    end
+                end
+end)()
+end)
+end
+end
+end)
+
+task.spawn(function()
+    while task.wait() do
+        if AutoCollectAllGems then
+            pcall(function()
+                coroutine.wrap(function()
+                for i,v in pairs(game:GetService("Workspace").orbFolder:GetDescendants()) do
+                    if v.Name == "TouchInterest" and not string.find(v.Parent.Parent.Name,"Orb") then
+                        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+                        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
+                    end
+                end
+end)()
+end)
+end
+end
+end)
+
+task.spawn(function()
+    while task.wait() do
+        if AutoCollectAllHoops then
+            pcall(function()
+                coroutine.wrap(function()
+                for i,v in pairs(game:GetService("Workspace").Hoops:GetDescendants()) do
+                    if v.Name == "TouchInterest" then
+                        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+                        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
+                    end
+                end
+end)()
+end)
+end
+end
+end)
+
+task.spawn(function()
+    while task.wait() do
+        if AutoRebirth then
+            pcall(function()
+                coroutine.wrap(function()
+                local args = {
+                    [1] = "rebirthRequest"
+                }
+                game:GetService("ReplicatedStorage").rEvents.rebirthEvent:FireServer(unpack(args))
+end)()
+end)
+end
+end
+end)
+
+task.spawn(function()
+    while task.wait() do
+        if AutoOpen1Crystal then
+            pcall(function()
+                coroutine.wrap(function()
+                local args = {
+                    [1] = "openCrystal",
+                    [2] = selectedCrystal
+                }
+                game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer(unpack(args))
+end)()
+end)
+end
+end
+end)
+
+local selectedSpeed
+PlayerTab:Slider("Walk Speed", 1,100,16, function(a)
+	selectedSpeed = a;
+end)
+
+local selectedJump
+PlayerTab:Slider("Jump Power", 1,300,50, function(a)
+	selectedJump = a;
+end)
+
+PlayerTab:Slider("FOV", 16,120,70, function(value)
+		local camera = workspace.CurrentCamera;
+		camera.FieldOfView = value
+end)
+
+PlayerTab:Button("Infinite Jump", function()
+    game:GetService("UserInputService").JumpRequest:connect(function()
+    game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+    end)
+end)
+
+   local L_32_ = Vector3.new(Coordinates)
+PlayerTab:Button("Anti Afk", function()
+		game:GetService("Players").Idled:connect(function()
+			warn("anti-afk")
+			L_83_:CaptureController()
+			L_83_:ClickButton2(Vector2.new())
+		end)
+end)
+
+PlayerTab:Button("Hide Name", function()
+for _,m in pairs(game:GetService("Workspace"):GetDescendants()) do
+if m.ClassName == "TextLabel" then 
+if m.Text == game:GetService("Players").LocalPlayer.Name then
+m:Destroy()
+for j,m in pairs(game:GetService("Players").LocalPlayer:GetDescendants()) do
+if m.ClassName == "TextLabel" then 
+if m.Text == game:GetService("Players").LocalPlayer.Name then
+m:Destroy()
+for h,v in pairs(workspace[game.Players.LocalPlayer.Name].Head:GetChildren()) do
+if v:IsA('BillboardGui') then
+v:Remove()
+end
+end
+end
+end
+end
+end
+end
+end
+
+while true do
+    for i,s in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if s:IsA("Accessory") then
+    s.Parent = workspace
+    end
+    end
+
+    for i,f in pairs(game.Workspace[game.Players.LocalPlayer.Name].Head:GetChildren()) do
+        if f:IsA("Decal") and f.Name == "face" then
+            f.Parent = nil
+        end
+    end
+
+    if game.Players.LocalPlayer.Character.Shirt then
+    game.Players.LocalPlayer.Character.Shirt:Remove()
+    else
+    end
+    if game.Players.LocalPlayer.Character.Pants then
+    game.Players.LocalPlayer.Character.Pants:Remove()
+    else
+    end
+    if game.Players.LocalPlayer.Character["Shirt Graphic"] then
+    game.Players.LocalPlayer.Character["Shirt Graphic"]:Remove()
+    else
+    end
+    if game.Players.LocalPlayer.Character.Torso.roblox then
+    game.Players.LocalPlayer.Character.Torso.roblox:Remove()
+    else
+    end
+    game:GetService("RunService").Stepped:wait()
+end
+end)
+
+
+
+
+task.spawn(function()
+    while task.wait() do
+        if selectedSpeed then
+            pcall(function()
+                coroutine.wrap(function()
+				game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = selectedSpeed
+end)()
+end)
+end
+end
+end)
+
+
+
+task.spawn(function()
+    while task.wait(1) do
+        if selectedJump then
+            pcall(function()
+                coroutine.wrap(function()
+				game.Players.LocalPlayer.Character.Humanoid.JumpPower = selectedJump
+end)()
+end)
+end
+end
+end)
