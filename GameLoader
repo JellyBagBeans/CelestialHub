@@ -64,6 +64,8 @@ elseif game.PlaceId == 10821317529 then -- Pickaxe Mining Simulator
     script = "Pickaxe Mining Simulator"
 elseif game.PlaceId == 3072832953 then -- Escape Prison Obby
     script = "Escape Prison Obby"
+elseif game.PlaceId == 3101667897 then -- Legends Of Speed
+    script = "Legends Of Speed"
 else
     script = "Universal"
 end
@@ -219,6 +221,9 @@ elseif game.PlaceId ==  10821317529 then -- Pickaxe Mining Simulator
     
 elseif game.PlaceId ==  3072832953 then -- Escape Prison Obby
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/EscapePrisonObby"))()
+    
+elseif game.PlaceId ==  3101667897 then -- Legends Of Speed
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/LegendsOfSpeed"))()
     
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()   
