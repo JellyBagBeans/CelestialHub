@@ -66,6 +66,8 @@ elseif game.PlaceId == 3072832953 then -- Escape Prison Obby
     script = "Escape Prison Obby"
 elseif game.PlaceId == 3101667897 then -- Legends Of Speed
     script = "Legends Of Speed"
+elseif game.PlaceId == 2753915549 then -- Blox Fruits
+    script = "Blox Fruits"
 else
     script = "Universal"
 end
@@ -224,6 +226,9 @@ elseif game.PlaceId ==  3072832953 then -- Escape Prison Obby
     
 elseif game.PlaceId ==  3101667897 then -- Legends Of Speed
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/LegendsOfSpeed"))()
+    
+elseif game.PlaceId ==  2753915549 then -- Blox Fruits
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/BloxFruits"))()
     
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()   
