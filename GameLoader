@@ -68,6 +68,8 @@ elseif game.PlaceId == 3101667897 then -- Legends Of Speed
     script = "Legends Of Speed"
 elseif game.PlaceId == 2753915549 then -- Blox Fruits
     script = "Blox Fruits"
+elseif game.PlaceId == 9777456229 then -- Tapping Simulator Classic
+    script = "Tapping Simulator Classic"
 else
     script = "Universal"
 end
@@ -229,6 +231,9 @@ elseif game.PlaceId ==  3101667897 then -- Legends Of Speed
     
 elseif game.PlaceId ==  2753915549 then -- Blox Fruits
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/BloxFruits"))()
+    
+elseif game.PlaceId ==  9777456229 then -- Tapping Simulator Classic
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TappingSimulatorClassic"))()
     
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()   
