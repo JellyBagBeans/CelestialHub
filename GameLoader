@@ -14,8 +14,6 @@ elseif game.PlaceId == 11374030763 or game.PlaceId == 11254130090 or game.PlaceI
     script = "Strongest Tapper Simulator"
 elseif game.PlaceId == 10524502174 then -- One Punch Fighters Simulator
     script = "One Punch Simulator"
-elseif game.PlaceId == 8612195438 then -- Clicker Party Simulator
-    script = "Clicker Party Simulator"
 elseif game.PlaceId == 10108131074 then -- Mow The Lawn Simulator
     script = "Mow The Lawn"
 elseif game.PlaceId == 9336544530 then -- Dice Simulator
@@ -48,14 +46,8 @@ elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
     script = "Strong Ninja Simulator"
 elseif game.PlaceId == 7041463017 then -- Strong Sword Simulator
     script = "Strong Sword Simulator"
-elseif game.PlaceId == 8998370421 then -- Anime Tap Simulator Clicker 2
-    script = "Anime Tap Simulator Clicker 2"
-elseif game.PlaceId == 10709624738 then -- Button Simulator Rarity
-    script = "Button Simulator Rarity"
 elseif game.PlaceId == 2866967438 then -- Fishing Simulator
     script = "Fishing Simulator"
-elseif game.PlaceId == 10861112990 then -- Anime Artifacts Simulator 2
-    script = "Anime Artifacts Simulator 2"
 elseif game.PlaceId == 5055081323 then -- Swordman Simulator
     script = "Swordman Simulator"
 elseif game.PlaceId == 9796685905 then -- Swordman Simulator
@@ -153,9 +145,6 @@ elseif game.PlaceId == 11374030763 or game.PlaceId == 11254130090 or game.PlaceI
 elseif game.PlaceId == 10524502174 then -- One Punch Fighters Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/OnePunchSim"))()
     
-elseif game.PlaceId == 8612195438 then -- Clicker Party Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ClickerPartySim"))()
-    
 elseif game.PlaceId == 10108131074 then -- Mow The Lawn Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MowTheLawn"))()
     
@@ -204,17 +193,8 @@ elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
 elseif game.PlaceId == 7041463017 then -- Strong Sword Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongSwordSimulator"))()
     
-elseif game.PlaceId == 8998370421 then -- Anime Tap Simulator Clicker 2
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AnimeTapSimulatorClicker2"))()
-    
-elseif game.PlaceId == 10709624738 then -- Button Simulator Rarity
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ButtonSimulatorRarity"))()
-    
 elseif game.PlaceId ==  2866967438 then -- Fishing Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
-    
-elseif game.PlaceId ==  10861112990 then -- Anime Artifacts Simulator 2
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/AnimeArtifactsSimulator2"))()
     
 elseif game.PlaceId ==  5055081323 then -- Swordman Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SwordmanSimulator"))()
