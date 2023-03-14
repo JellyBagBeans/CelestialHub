@@ -19,11 +19,11 @@ elseif game.PlaceId == 9551640993 then -- Mining Simulator 2
 elseif game.PlaceId == 10108131074 then -- Mow The Lawn Simulator
     script = "Mow The Lawn"
 elseif game.PlaceId == 10524502174 then -- One Punch Fighters Simulator
-    script = "One Punch Simulator"
+    script = "One Punch Fighters Simulator"
 elseif game.PlaceId == 6284583030 then -- Pet Simulator X
     script = "Pet Simulator X"
-elseif game.PlaceId == 10321372166 then -- Pet Simulator X HardCore
-    script = "Pet Simulator X (HC)"
+elseif game.PlaceId == 10321372166 then -- Pet Simulator X Hardcore
+    script = "Pet Simulator X Hardcore"
 elseif game.PlaceId == 10821317529 then -- Pickaxe Mining Simulator
     script = "Pickaxe Mining Simulator"
 elseif game.PlaceId == 9285238704 then -- Race Clicker
@@ -148,7 +148,7 @@ elseif game.PlaceId == 6284583030 then -- Pet Simulator X
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorX"))()
     
 elseif game.PlaceId == 10321372166 then -- Pet Simulator X HardCore
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorX"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorXHardcore"))()
     
 elseif game.PlaceId ==  10821317529 then -- Pickaxe Mining Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PickaxeMiningSimulator"))()
