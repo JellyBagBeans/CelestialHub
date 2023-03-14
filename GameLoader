@@ -32,8 +32,6 @@ elseif game.PlaceId == 9941633436 then -- Rank Simulator
     script = "Rank Simulator"
 elseif game.PlaceId == 8540346411 then -- Rebirth Champions X
     script = "Rebirth Champions X"
-elseif game.PlaceId == 8818978508 then -- Space Simulator Reborn
-    script = "Space Reborn"
 elseif game.PlaceId == 6875469709 then -- Strongest Punch Simulator
     script = "Strongest Punch Simulator"
 elseif game.PlaceId == 11374030763 or game.PlaceId == 11254130090 or game.PlaceId == 10157366004 then -- Strongest Tapper Simulator
@@ -113,92 +111,92 @@ request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 
-if game.PlaceId == 8884334497 then -- Mining Clicker Simulator (Group: Spyder Crew)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MiningClickerSim"))()
-    
-elseif game.PlaceId == 9498006165 then -- Tapping Simulator (Group: Tapping Simulator by Zood Studios) 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TappingSim"))()
-    
-elseif game.PlaceId == 9551640993 then -- Mining Simulator 2
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MiningSim2"))()
-    
-elseif game.PlaceId == 7606302010 then -- Yo-Yo Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/YoYoSimulator"))()
-    
+if game.PlaceId ==  2753915549 then -- Blox Fruits
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/BloxFruits"))()
+
+elseif game.PlaceId ==  3072832953 then -- Escape Prison Obby
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/EscapePrisonObby"))()
+
 elseif game.PlaceId == 8962384769 then -- Firework Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/FireworkSimulator"))()
-    
-elseif game.PlaceId == 11374030763 or game.PlaceId == 11254130090 or game.PlaceId == 10157366004 then -- Strongest Tapper Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongestTapperSimulator"))()
-    
-elseif game.PlaceId == 10524502174 then -- One Punch Fighters Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/OnePunchSim"))()
-    
+
+elseif game.PlaceId ==  2866967438 then -- Fishing Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
+
+elseif game.PlaceId == 2986677229 then -- Giant Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/GiantSimulator"))()
+
+elseif game.PlaceId ==  9154418679 then -- Hero Pet Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/HeroPetSimulator"))()
+
+elseif game.PlaceId ==  3101667897 then -- Legends Of Speed
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/LegendsOfSpeed"))()
+
+elseif game.PlaceId == 8884334497 then -- Mining Clicker Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MiningClickerSim"))()
+
+elseif game.PlaceId == 9551640993 then -- Mining Simulator 2
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MiningSim2"))()
+
 elseif game.PlaceId == 10108131074 then -- Mow The Lawn Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/MowTheLawn"))()
-    
-elseif game.PlaceId == 10106105124 then -- Wheat Farming Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/WheatFarmingSimulator"))()
-    
-elseif game.PlaceId == 9285238704 then -- Race Clicker
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RaceClicker"))()
-    
-elseif game.PlaceId == 6875469709 then -- Strongest Punch Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongestPunchSim"))()
-    
+
+elseif game.PlaceId == 10524502174 then -- One Punch Fighters Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/OnePunchSim"))()
+
 elseif game.PlaceId == 6284583030 then -- Pet Simulator X
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorX"))()
     
 elseif game.PlaceId == 10321372166 then -- Pet Simulator X HardCore
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PetSimulatorX"))()
     
-elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongNinjaSim"))()
+elseif game.PlaceId ==  10821317529 then -- Pickaxe Mining Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PickaxeMiningSimulator"))()
     
-elseif game.PlaceId == 8750997647 then -- Tapping Legends X
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TappingLegendsX"))()
-    
-elseif game.PlaceId == 8540346411 then -- Rebirth Champions X
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RebirthChampionsX"))() 
-    
-elseif game.PlaceId == 2986677229 then -- Giant Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/GiantSimulator"))()
-    
-elseif game.PlaceId == 9625096419 then -- Tapper Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TapperSimulator"))()
+elseif game.PlaceId == 9285238704 then -- Race Clicker
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RaceClicker"))()
     
 elseif game.PlaceId == 9941633436 then -- Rank Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RankSimulator"))()
     
+elseif game.PlaceId == 8540346411 then -- Rebirth Champions X
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RebirthChampionsX"))()
+    
+elseif game.PlaceId == 6875469709 then -- Strongest Punch Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongestPunchSim"))()
+    
+elseif game.PlaceId == 11374030763 or game.PlaceId == 11254130090 or game.PlaceId == 10157366004 then -- Strongest Tapper Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongestTapperSimulator"))()
+
 elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongNinjaSimulator"))()
     
 elseif game.PlaceId == 7041463017 then -- Strong Sword Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongSwordSimulator"))()
     
-elseif game.PlaceId ==  2866967438 then -- Fishing Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()
+elseif game.PlaceId ==  9796685905 then -- Super Hero Clicker Race
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SuperHeroClickerRace"))()
     
 elseif game.PlaceId ==  5055081323 then -- Swordman Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SwordmanSimulator"))()
     
-elseif game.PlaceId ==  9796685905 then -- Super Hero Clicker Race
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/SuperHeroClickerRace"))()
+elseif game.PlaceId == 9625096419 then -- Tapper Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TapperSimulator"))()
     
-elseif game.PlaceId ==  10821317529 then -- Pickaxe Mining Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/PickaxeMiningSimulator"))()
+elseif game.PlaceId == 8750997647 then -- Tapping Legends X
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TappingLegendsX"))()
+
+elseif game.PlaceId == 9498006165 then -- Tapping Simulator 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/TappingSim"))()
+
+elseif game.PlaceId == 10106105124 then -- Wheat Farming Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/WheatFarmingSimulator"))()
+
+elseif game.PlaceId == 7606302010 then -- Yo-Yo Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/YoYoSimulator"))()
     
-elseif game.PlaceId ==  3072832953 then -- Escape Prison Obby
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/EscapePrisonObby"))()
-    
-elseif game.PlaceId ==  3101667897 then -- Legends Of Speed
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/LegendsOfSpeed"))()
-    
-elseif game.PlaceId ==  2753915549 then -- Blox Fruits
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/BloxFruits"))()
-    
-elseif game.PlaceId ==  9154418679 then -- Hero Pet Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/HeroPetSimulator"))()
+elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongNinjaSim"))() 
     
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()   
