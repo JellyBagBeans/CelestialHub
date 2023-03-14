@@ -193,10 +193,7 @@ elseif game.PlaceId == 10106105124 then -- Wheat Farming Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/WheatFarmingSimulator"))()
 
 elseif game.PlaceId == 7606302010 then -- Yo-Yo Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/YoYoSimulator"))()
-    
-elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongNinjaSim"))() 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/YoYoSimulator"))() 
     
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Universal"))()   
