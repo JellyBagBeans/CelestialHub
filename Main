@@ -259,7 +259,7 @@ function Mainholder:Window(hubname, gamename, discordlink, feedbackloadstring, h
    TaTitle.Position = UDim2.new(0.113608718, 0, 0.0210487917, 0)
    TaTitle.Size = UDim2.new(0, 159, 0, 20)
    TaTitle.Font = Enum.Font.Gotham
-   TaTitle.Text = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+   TaTitle.Text = "Tabs"
    TaTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
    TaTitle.TextSize = 25.000
 
