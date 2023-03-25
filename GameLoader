@@ -1,4 +1,6 @@
-if game.PlaceId == 2753915549 then -- Blox Fruits
+if game.PlaceId == 4893679160 then -- Big Brain Simulator
+    script = "Big Brain Simulator"
+elseif game.PlaceId == 2753915549 then -- Blox Fruits
     script = "Blox Fruits"
 elseif game.PlaceId == 3072832953 then -- Escape Prison Obby
     script = "Escape Prison Obby"
@@ -111,7 +113,10 @@ request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 
-if game.PlaceId ==  2753915549 then -- Blox Fruits
+if game.PlaceId ==  4893679160 then -- Big Brain Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/BigBrainSimulator"))()
+
+elseif game.PlaceId ==  2753915549 then -- Blox Fruits
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/BloxFruits"))()
 
 elseif game.PlaceId ==  3072832953 then -- Escape Prison Obby
