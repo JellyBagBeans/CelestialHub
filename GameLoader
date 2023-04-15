@@ -32,6 +32,8 @@ elseif game.PlaceId == 9285238704 then -- Race Clicker
     script = "Race Clicker"
 elseif game.PlaceId == 9941633436 then -- Rank Simulator
     script = "Rank Simulator"
+elseif game.PlaceId == 11488626438 then -- Rank Simulator X
+    script = "Rank Simulator X"
 elseif game.PlaceId == 8540346411 then -- Rebirth Champions X
     script = "Rebirth Champions X"
 elseif game.PlaceId == 6875469709 then -- Strongest Punch Simulator
@@ -163,6 +165,9 @@ elseif game.PlaceId == 9285238704 then -- Race Clicker
     
 elseif game.PlaceId == 9941633436 then -- Rank Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RankSimulator"))()
+    
+elseif game.PlaceId == 11488626438 then -- Rank Simulator X
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RankSimulatorX"))()
     
 elseif game.PlaceId == 8540346411 then -- Rebirth Champions X
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/RebirthChampionsX"))()
