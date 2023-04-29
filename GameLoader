@@ -2,6 +2,8 @@ if game.PlaceId == 4893679160 then -- Big Brain Simulator
     script = "Big Brain Simulator"
 elseif game.PlaceId == 2753915549 then -- Blox Fruits
     script = "Blox Fruits"
+elseif game.PlaceId == 12004201923 then -- Chest Simulator
+    script = "Chest Simulator"
 elseif game.PlaceId == 3072832953 then -- Escape Prison Obby
     script = "Escape Prison Obby"
 elseif game.PlaceId == 8962384769 then -- Firework Simulator
@@ -120,6 +122,9 @@ if game.PlaceId ==  4893679160 then -- Big Brain Simulator
 
 elseif game.PlaceId ==  2753915549 then -- Blox Fruits
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/BloxFruits"))()
+    
+elseif game.PlaceId ==  12004201923 then -- Chest Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ChestSimulator"))()
 
 elseif game.PlaceId ==  3072832953 then -- Escape Prison Obby
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/EscapePrisonObby"))()
