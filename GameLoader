@@ -88,6 +88,7 @@ local webhookcheck =
    (jjsploitv4 and "JJSploit") or
    (Arceus X and "Arceus X") or
    (Kitten Milk and "Kitten Milk") or
+   (Hydrogen and "Hydrogen") or
    ("Unknown")
 
 GameID = game.PlaceId
