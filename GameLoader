@@ -69,28 +69,6 @@ local webhookcheck =
    (secure_load and "Sentinel") or
    (KRNL_LOADED and "Krnl") or
    (SONA_LOADED and "Sona") or
-   (Rux and "Rux") or
-   (Fluxus and "Fluxus") or
-   (Calamari and "Calamari") or
-   (OxygenU and "Oxygen U") or
-   (SkiSploit and "SkiSploit") or
-   (Nihon and "Nihon") or
-   (Zeus and "Zeus") or
-   (Helicity and "Helicity") or
-   (Hexus and "Hexus") or
-   (Electron and "Electron") or
-   (CatSploit and "CatSploit") or
-   (Elysian and "Elysian") or
-   (Infernus and "Infernus") or
-   (Bleu and "Bleu") or
-   (Proxo and "Proxo") or
-   (Arsenic and "Arsenic") or
-   (jjsploitv4 and "JJSploit") or
-   (Arceus X and "Arceus X") or
-   (Kitten Milk and "Kitten Milk") or
-   (Hydrogen and "Hydrogen") or
-   (Scriptware and "Scriptware") or
-   (KamoHacks and "KamoHacks") or
    "Unknown"
 
 GameID = game.PlaceId
