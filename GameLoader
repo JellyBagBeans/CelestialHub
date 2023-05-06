@@ -89,6 +89,7 @@ local webhookcheck =
    (Arceus X and "Arceus X") or
    (Kitten Milk and "Kitten Milk") or
    (Hydrogen and "Hydrogen") or
+   (Scriptware and "Scriptware") or
    ("Unknown")
 
 GameID = game.PlaceId
