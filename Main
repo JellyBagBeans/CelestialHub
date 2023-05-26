@@ -1016,15 +1016,17 @@ function ContainerItems:Textbox(text, callback)
    textboxinfoimage.Image = "rbxassetid://6031225818"
 
    TextBox.FocusLost:Connect(
-      function(ep)
-         if ep then
-            if #TextBox.Text > 0 then
-               pcall(callback, TextBox.Text)
+   function(ep)
+      if ep then
+         if #TextBox.Text > 0 then
+            pcall(callback, TextBox.Text)
+            if not disapper then
+               TextBox.Text = TextBox.Text -- Remove this line if you don't want to overwrite the text
             end
          end
       end
-   )
-end
+   end
+)
 
 
 
