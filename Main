@@ -938,92 +938,97 @@ MainFrameSearchBox.Changed:Connect(UpdateResoults)
 
 local ContainerItems = {}
 
-function ContainerItems:Textbox(text, callback)
-    local Textbox = Instance.new("TextButton")
-    local TextboxTitle = Instance.new("TextLabel")
-    local TextboxFrame = Instance.new("Frame")
-    local TextboxFrameCorner = Instance.new("UICorner")
-    local TextBox = Instance.new("TextBox")
-    local TextboxCorner = Instance.new("UICorner")
-    local Textboxinfo = Instance.new("TextLabel")
-    local textboxinfoimage = Instance.new("ImageLabel")
+function ContainerItems:Textbox(text, disapper, callback)
+   local Textbox = Instance.new("TextButton")
+   local TextboxTitle = Instance.new("TextLabel")
+   local TextboxFrame = Instance.new("Frame")
+   local TextboxFrameCorner = Instance.new("UICorner")
+   local TextBox = Instance.new("TextBox")
+   local TextboxCorner = Instance.new("UICorner")
+   local Textboxinfo = Instance.new("TextLabel")
+   local textboxinfoimage = Instance.new("ImageLabel")
 
-    Textbox.Name = text
-    Textbox.Parent = Container
-    Textbox.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-    Textbox.Position = UDim2.new(-0.747557044, 0, 0.729113936, 0)
-    Textbox.Size = UDim2.new(0, 405, 0, 40)
-    Textbox.AutoButtonColor = false
-    Textbox.Font = Enum.Font.Gotham
-    Textbox.Text = ""
-    Textbox.TextColor3 = Color3.fromRGB(255, 255, 255)
-    Textbox.TextSize = 14.000
+   Textbox.Name = text
+   Textbox.Parent = Container
+   Textbox.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+   Textbox.Position = UDim2.new(-0.747557044, 0, 0.729113936, 0)
+   Textbox.Size = UDim2.new(0, 405, 0, 40)
+   Textbox.AutoButtonColor = false
+   Textbox.Font = Enum.Font.Gotham
+   Textbox.Text = ""
+   Textbox.TextColor3 = Color3.fromRGB(255, 255, 255)
+   Textbox.TextSize = 14.000
+   
+   TextboxTitle.Name = "TextboxTitle"
+   TextboxTitle.Parent = Textbox
+   TextboxTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+   TextboxTitle.BackgroundTransparency = 1.000
+   TextboxTitle.Position = UDim2.new(0.0198511165, 0, 0, 0)
+   TextboxTitle.Size = UDim2.new(0, 405, 0, 40)
+   TextboxTitle.Font = Enum.Font.Gotham
+   TextboxTitle.Text = text
+   TextboxTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+   TextboxTitle.TextSize = 15.000
+   TextboxTitle.TextXAlignment = Enum.TextXAlignment.Left
+   
+   TextboxFrame.Name = "TextboxFrame"
+   TextboxFrame.Parent = Textbox
+   TextboxFrame.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+   TextboxFrame.Position = UDim2.new(0.650124013, 0, 0.134999841, 0)
+   TextboxFrame.Size = UDim2.new(0, 134, 0, 27)
+   
+   TextboxFrameCorner.CornerRadius = UDim.new(0, 6)
+   TextboxFrameCorner.Name = "TextboxFrameCorner"
+   TextboxFrameCorner.Parent = TextboxFrame
+   
+   TextBox.Parent = TextboxFrame
+   TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+   TextBox.BackgroundTransparency = 1.000
+   TextBox.Size = UDim2.new(0, 134, 0, 27)
+   TextBox.Font = Enum.Font.Gotham
+   TextBox.Text = disapper
+   TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+   TextBox.TextSize = 15.000
+   
+   TextboxCorner.CornerRadius = UDim.new(0, 6)
+   TextboxCorner.Name = "TextboxCorner"
+   TextboxCorner.Parent = Textbox
+   
+   Textboxinfo.Name = "Textboxinfo"
+   Textboxinfo.Parent = Textbox
+   Textboxinfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+   Textboxinfo.BackgroundTransparency = 1.000
+   Textboxinfo.Position = UDim2.new(0.476641178, 0, 0, 0)
+   Textboxinfo.Size = UDim2.new(0, 53, 0, 40)
+   Textboxinfo.Visible = false
+   Textboxinfo.Font = Enum.Font.Gotham
+   Textboxinfo.Text = "->"
+   Textboxinfo.TextColor3 = Color3.fromRGB(255, 255, 255)
+   Textboxinfo.TextSize = 15.000
+   
+   textboxinfoimage.Name = "textboxinfoimage"
+   textboxinfoimage.Parent = Textbox
+   textboxinfoimage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+   textboxinfoimage.BackgroundTransparency = 1.000
+   textboxinfoimage.Position = UDim2.new(0.523456812, 0, 0.241463467, 0)
+   textboxinfoimage.Size = UDim2.new(0, 25, 0, 21)
+   textboxinfoimage.Image = "rbxassetid://6031225818"
 
-    TextboxTitle.Name = "TextboxTitle"
-    TextboxTitle.Parent = Textbox
-    TextboxTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    TextboxTitle.BackgroundTransparency = 1.000
-    TextboxTitle.Position = UDim2.new(0.0198511165, 0, 0, 0)
-    TextboxTitle.Size = UDim2.new(0, 405, 0, 40)
-    TextboxTitle.Font = Enum.Font.Gotham
-    TextboxTitle.Text = text
-    TextboxTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-    TextboxTitle.TextSize = 15.000
-    TextboxTitle.TextXAlignment = Enum.TextXAlignment.Left
 
-    TextboxFrame.Name = "TextboxFrame"
-    TextboxFrame.Parent = Textbox
-    TextboxFrame.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-    TextboxFrame.Position = UDim2.new(0.650124013, 0, 0.134999841, 0)
-    TextboxFrame.Size = UDim2.new(0, 134, 0, 27)
-
-    TextboxFrameCorner.CornerRadius = UDim.new(0, 6)
-    TextboxFrameCorner.Name = "TextboxFrameCorner"
-    TextboxFrameCorner.Parent = TextboxFrame
-
-    TextBox.Parent = TextboxFrame
-    TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    TextBox.BackgroundTransparency = 1.000
-    TextBox.Size = UDim2.new(0, 134, 0, 27)
-    TextBox.Font = Enum.Font.Gotham
-    TextBox.Text = ""
-    TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-    TextBox.TextSize = 15.000
-
-    TextboxCorner.CornerRadius = UDim.new(0, 6)
-    TextboxCorner.Name = "TextboxCorner"
-    TextboxCorner.Parent = Textbox
-
-    Textboxinfo.Name = "Textboxinfo"
-    Textboxinfo.Parent = Textbox
-    Textboxinfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Textboxinfo.BackgroundTransparency = 1.000
-    Textboxinfo.Position = UDim2.new(0.476641178, 0, 0, 0)
-    Textboxinfo.Size = UDim2.new(0, 53, 0, 40)
-    Textboxinfo.Visible = false
-    Textboxinfo.Font = Enum.Font.Gotham
-    Textboxinfo.Text = "->"
-    Textboxinfo.TextColor3 = Color3.fromRGB(255, 255, 255)
-    Textboxinfo.TextSize = 15.000
-
-    textboxinfoimage.Name = "textboxinfoimage"
-    textboxinfoimage.Parent = Textbox
-    textboxinfoimage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    textboxinfoimage.BackgroundTransparency = 1.000
-    textboxinfoimage.Position = UDim2.new(0.523456812, 0, 0.241463467, 0)
-    textboxinfoimage.Size = UDim2.new(0, 25, 0, 21)
-    textboxinfoimage.Image = "rbxassetid://6031225818"
-
-    TextBox.FocusLost:Connect(
-        function(enterPressed)
-            if enterPressed then
-                local enteredText = TextBox.Text
-                if enteredText ~= "" then
-                    pcall(callback, enteredText)
-                end
+   TextBox.FocusLost:Connect(
+      function(ep)
+         if ep then
+            if #TextBox.Text > 0 then
+               pcall(callback, TextBox.Text)
+               if disapper then
+                  TextBox.Text = ""
+               end
             end
-        end
-    )
+         end
+      end
+   )
+
+   Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 end
 
 
