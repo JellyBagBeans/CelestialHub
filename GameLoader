@@ -1,7 +1,5 @@
 if game.PlaceId == 2753915549 then -- Blox Fruits
     script = "Blox Fruits"
-elseif game.PlaceId == 3072832953 then -- Escape Prison Obby
-    script = "Escape Prison Obby"
 elseif game.PlaceId == 8962384769 then -- Firework Simulator
     script = "Firework Simulator"
 elseif game.PlaceId == 2866967438 then -- Fishing Simulator
@@ -115,9 +113,6 @@ request(abcdef)
 
 if game.PlaceId ==  2753915549 then -- Blox Fruits
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/BloxFruits"))()
-
-elseif game.PlaceId ==  3072832953 then -- Escape Prison Obby
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/EscapePrisonObby"))()
 
 elseif game.PlaceId == 8962384769 then -- Firework Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/FireworkSimulator"))()
