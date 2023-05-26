@@ -939,7 +939,7 @@ MainFrameSearchBox.Changed:Connect(UpdateResoults)
 local ContainerItems = {}
 
 
-function ContainerItems:Textbox(text, disapper, callback)
+function ContainerItems:Textbox(text, callback)
    local Textbox = Instance.new("TextButton")
    local TextboxTitle = Instance.new("TextLabel")
    local TextboxFrame = Instance.new("Frame")
@@ -987,7 +987,7 @@ function ContainerItems:Textbox(text, disapper, callback)
    TextBox.BackgroundTransparency = 1.000
    TextBox.Size = UDim2.new(0, 134, 0, 27)
    TextBox.Font = Enum.Font.Gotham
-   TextBox.Text = disapper
+   TextBox.Text = ""
    TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
    TextBox.TextSize = 15.000
    
@@ -1015,21 +1015,15 @@ function ContainerItems:Textbox(text, disapper, callback)
    textboxinfoimage.Size = UDim2.new(0, 25, 0, 21)
    textboxinfoimage.Image = "rbxassetid://6031225818"
 
-
    TextBox.FocusLost:Connect(
       function(ep)
          if ep then
             if #TextBox.Text > 0 then
                pcall(callback, TextBox.Text)
-               if disapper then
-                  TextBox.Text = ""
-               end
             end
          end
       end
    )
-
-   Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 end
 
 
