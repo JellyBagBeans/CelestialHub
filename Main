@@ -938,6 +938,7 @@ MainFrameSearchBox.Changed:Connect(UpdateResoults)
 
 local ContainerItems = {}
 
+
 function ContainerItems:Textbox(text, disapper, callback)
    local Textbox = Instance.new("TextButton")
    local TextboxTitle = Instance.new("TextLabel")
@@ -1030,6 +1031,7 @@ function ContainerItems:Textbox(text, disapper, callback)
 
    Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 end
+
 
 
 function ContainerItems:Slider(text, min, max, start, callback)
