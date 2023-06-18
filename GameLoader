@@ -1,5 +1,7 @@
 if game.PlaceId == 2753915549 then -- Blox Fruits
     script = "Blox Fruits"
+elseif game.PlaceId == 13284033561 then -- Fishing Frenzy Simulator
+    script = "Fishing Frenzy Simulator"
 elseif game.PlaceId == 8962384769 then -- Firework Simulator
     script = "Firework Simulator"
 elseif game.PlaceId == 2866967438 then -- Fishing Simulator
@@ -113,6 +115,9 @@ request(abcdef)
 
 if game.PlaceId ==  2753915549 then -- Blox Fruits
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/BloxFruits"))()
+    
+elseif game.PlaceId == 13284033561 then -- Fishing Frenzy Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/FishingFrenzySimulator"))()
 
 elseif game.PlaceId == 8962384769 then -- Firework Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/FireworkSimulator"))()
