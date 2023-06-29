@@ -36,8 +36,6 @@ elseif game.PlaceId == 8540346411 then -- Rebirth Champions X
     script = "Rebirth Champions X"
 elseif game.PlaceId == 6875469709 then -- Strongest Punch Simulator
     script = "Strongest Punch Simulator"
-elseif game.PlaceId == 11374030763 or game.PlaceId == 11254130090 or game.PlaceId == 10157366004 then -- Strongest Tapper Simulator
-    script = "Strongest Tapper Simulator"
 elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
     script = "Strong Ninja Simulator"
 elseif game.PlaceId == 7041463017 then -- Strong Sword Simulator
@@ -169,9 +167,6 @@ elseif game.PlaceId == 8540346411 then -- Rebirth Champions X
     
 elseif game.PlaceId == 6875469709 then -- Strongest Punch Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongestPunchSimulator"))()
-    
-elseif game.PlaceId == 11374030763 or game.PlaceId == 11254130090 or game.PlaceId == 10157366004 then -- Strongest Tapper Simulator
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongestTapperSimulator"))()
 
 elseif game.PlaceId == 10476933477 then -- Strong Ninja Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/StrongNinjaSimulator"))()
