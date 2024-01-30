@@ -20,9 +20,6 @@ local function GetGems()
 	}
 	game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("GemEarned"):FireServer(unpack(args))
 task.wait(0.1)
-        if AutoGetGems == false then
-            break
-        end
     end
 end
 
