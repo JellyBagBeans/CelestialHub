@@ -1,4 +1,6 @@
-if game.PlaceId == 2753915549 then -- Blox Fruits
+if game.PlaceId == 15494065142 then -- Click A Rock
+    script = "Click A Rock"	
+elseif game.PlaceId == 2753915549 then -- Blox Fruits
     script = "Blox Fruits"
 elseif game.PlaceId == 13284033561 then -- Fishing Frenzy Simulator
     script = "Fishing Frenzy Simulator"
@@ -109,7 +111,10 @@ request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 
-if game.PlaceId ==  2753915549 then -- Blox Fruits
+if game.PlaceId ==  15494065142 then -- Click A Rock
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/ClickARock"))()
+
+elseif game.PlaceId ==  2753915549 then -- Blox Fruits
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/BloxFruits"))()
     
 elseif game.PlaceId == 13284033561 then -- Fishing Frenzy Simulator
