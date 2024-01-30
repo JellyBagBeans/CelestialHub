@@ -19,7 +19,7 @@ local function GetGems()
     		[1] = false
 	}
 	game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("GemEarned"):FireServer(unpack(args))
-task.wait(0.02)
+task.wait(0.1)
         if AutoGetGems == false then
             break
         end
@@ -29,7 +29,11 @@ end
 local function Upgrade()
     while AutoUpgrade do
         task.wait()
-        game:GetService("ReplicatedStorage").RemoteFunctions.ClickingRemote:InvokeServer()
+        local args = {
+    [1] = "MainLevel"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("StatModule"):WaitForChild("RemoteEventU"):FireServer(unpack(args))
 task.wait(0.1)
     end
 end
