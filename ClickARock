@@ -1,0 +1,106 @@
+if game.CoreGui:FindFirstChild("Mana") then
+    game.CoreGui.Mana:Destroy()
+end
+
+local UIlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/Main"))()
+
+for i,v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
+    v:Disable()
+end
+
+   local Win = UIlib:Window("Welcome","".. game.Players.LocalPlayer.Name)
+   local AutoFarmTab = Win:Tab("Auto Farm")
+   local PlayerTab = Win:Tab("Player")
+
+local function GetGems()
+    while AutoGetGems do
+        task.wait()
+        local args = {
+    		[1] = false
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("GemEarned"):FireServer(unpack(args))
+        if AutoGetGems == false then
+            break
+        end
+    end
+end
+
+local function Upgrade()
+    while AutoUpgrade do
+        task.wait()
+        game:GetService("ReplicatedStorage").RemoteFunctions.ClickingRemote:InvokeServer()
+    end
+end
+
+AutoFarmTab:Toggle("Auto Get Gems", false, function(a)
+    AutoGetGems = a
+    if AutoGetGems == true then
+        GetGems()
+    end
+end)
+
+AutoFarmTab:Toggle("Auto Upgrade", false, function(a)
+    AutoUpgrade = a
+    if AutoUpgrade == true then
+        Upgrade()
+    end
+end)
+
+local selectedWalkSpeed
+PlayerTab:Textbox("WalkSpeed", "Number", function(a)
+	selectedWalkSpeed = a
+	_G.HackedWalkSpeed = selectedWalkSpeed
+    if game:GetService("Players").LocalPlayer.Character then
+        game:GetService("Players").LocalPlayer.Character.Humanoid.Changed:connect(function()
+            game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = _G.HackedWalkSpeed
+        end)
+        game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = _G.HackedWalkSpeed
+    end
+    game:GetService("Players").LocalPlayer.CharacterAdded:connect(function(Char)
+        game:GetService("Players").LocalPlayer.Character = Char
+        repeat wait() until Char:FindFirstChild("Humanoid")
+        game:GetService("Players").LocalPlayer.Character.Humanoid.Changed:Connect(function()
+            game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = _G.HackedWalkSpeed
+        end)
+        game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = _G.HackedWalkSpeed
+    end)
+end)
+
+local selectedJumpPower
+PlayerTab:Textbox("JumpPower", "Number", function(a)
+	selectedJumpPower = a
+	_G.HackedJumpPower = selectedJumpPower
+    if game:GetService("Players").LocalPlayer.Character then
+        game:GetService("Players").LocalPlayer.Character.Humanoid.Changed:connect(function()
+            game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = _G.HackedJumpPower
+        end)
+        game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = _G.HackedJumpPower
+    end
+    game:GetService("Players").LocalPlayer.CharacterAdded:connect(function(Char)
+        game:GetService("Players").LocalPlayer.Character = Char
+        repeat wait() until Char:FindFirstChild("Humanoid")
+        game:GetService("Players").LocalPlayer.Character.Humanoid.Changed:Connect(function()
+            game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = _G.HackedJumpPower
+        end)
+        game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = _G.HackedJumpPower
+    end)
+end)
+
+PlayerTab:Textbox("FieldOfView", "Number", function(a)
+	workspace.CurrentCamera.FieldOfView = a
+end)
+
+PlayerTab:Button("Infinite Jump", function()
+    game:GetService("UserInputService").JumpRequest:connect(function()
+        game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+    end)
+end)
+
+local L_32_ = Vector3.new(Coordinates)
+PlayerTab:Button("Anti Afk", function()
+	game:GetService("Players").Idled:connect(function()
+		warn("anti-afk")
+		L_83_:CaptureController()
+		L_83_:ClickButton2(Vector2.new())
+	end)
+end)
